@@ -22,6 +22,7 @@
 \usepackage{parskip}
 \usepackage{hyperref}
 \usepackage{cite}
+% \usepackage{enumerate}
 
 \let\OLDthebibliography\thebibliography
 \renewcommand\thebibliography[1]{
@@ -275,6 +276,14 @@ Imprecise continuous-time models have been explored only very recently \cite{Sku
 
 *** this is a part of the text of some previous proposal, which could serve as an example of the type of text we are looking for here ***
 
+% % Addedd by Damjan
+The main objective of the proposed project is to \emph{develop a general framework for imprecise Markov chains in continuous time}. 
+
+
+
+
+% ## Addedd by Damjan
+
 The main objective of the proposed project is to \emph{use imprecise probabilities to develop a general framework for robust continuous-time queueing models}, in which the  imprecision of the input stochastic processes and their parameters is not ignored, but instead explicitly included. This framework will be able to predict the effect of this imprecision on relevant performance measures, for example by providing bounds on their expected value, and can then be used to make safer design choices that are robust against modelling errors.
 
 %The inferences of these models are a set of output distributions rather than one completely specified distribution and are therefore robust against imprecision in the input distributions.
@@ -303,6 +312,29 @@ Enclose risks that might endanger reaching project objectives and the contingenc
 
 
 *** this is a part of the text of some previous proposal, which could serve as an example of the type of text we are looking for here ***
+
+% % Addedd by Damjan
+\#**\# we could divide description of work packages 
+
+Work-packages
+\begin{enumerate}
+\item theoretical framework for stochastic processes in continuous time (Gert, Jasper)
+\item limit behaviour (Jasper, Gert, Damjan)
+*** Conditions for unique convergence; general structure of invariant distributions; direct calculations of limit distributions ??
+\item computation of the distances between imprecise operators and coefficients of ergodicity (Damjan)
+
+ *** Here I mean the problem of calculating the distances between the natural extensions of lower previsions, based on the differences obtained on their domains. That is what is $\max_{0\le f \le 1} |\underline E(f)-\underline E'(f)|$ if $ |\underline E(h)-\underline E'(h)|$ is given for every $h \in \mathcal H$. 
+ 
+ Another related problem is what is the maximal possible distance between two coherent lower previsions that coincide on a given set of gambles. 
+ 
+ The above results are needed if we want to calculate coefficients of ergodicity for $\overline T^n$ or $T_t$ in continuous time. 
+\item computational methods 
+\item sensitivity on the bounds of imprecise chains (perturbation analysis) (Damjan)
+\item time reversal 
+*** Theoretical framework for reversible imprecise Markov chains, including time reversal in general. Are time reversed imprecise Markov processes even still Markovian etc. I can start working on this part. 
+\end{enumerate}
+
+% ## Addedd by Damjan
 
 The first step in this project will be to \emph{develop robust versions of the basic building blocks of queueing models, that is, imprecise arrival and service-time processes} {\bf(Work Package 1)}.
 Initially, given their popularity and importance, we will focus on developing imprecise versions of Poisson processes and exponential distributions, with increasing degrees of robustness.
