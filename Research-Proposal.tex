@@ -244,10 +244,18 @@ Co-authorship between Damjan Škulj and Filip Hermans.
 
 \textbf{Indicate the state of the art.}
 
+*** Some initial text that states that this project is concerned with imprecise Markov chains, that these are robust versions of Markov chains that use the framework of IP. ***
 
-*** this is a part of the text of some previous proposal, which could serve as an example of the type of text we are looking for here ***
+\emph{Markov chains}
 
-Lots of text on queueing theory used to be here...
+*** Brief introduction to Markov chains. They have been around for a long time, have been studied by some of the greatest mathematicians, and are one of the most popular probabilistic models. The reason for this popularity is that they are sufficiently general, but at the same time still posess plenty of powerful properties, which makes them easy to work and compute with. ***
+
+\emph{Imprecise probability}
+
+*** Introduce IP, explain how general it is, and argue (extensively) why it is important from a practical point of view. ***
+
+{\color{Gray}
+Some old text on the topic that could be reused and/or rephrased:
 
 Basically, imprecise probability theory~\cite{augustin2013:itip,walley1991,troffaes2013:lp} is an extension of probability theory that allows for partial probability specifications.
 For example, whenever it is infeasible to reliably estimate the probability of some event, this theory allows for the use of a probability interval instead.
@@ -266,19 +274,28 @@ Inference in imprecise probability models tends to be computationally challengin
 Although state of the art research on imprecise probability has focussed rather extensively on the development of efficient computational inference methods, this line of research is ongoing, and many types of inference remain intractable.
 Nevertheless, for the special case of discrete time imprecise stochastic processes, recent breakthroughs have led to the discovery of some powerful theoretical properties, which in turn have led to the development  of efficient (often linear or polynomial) algorithms~\cite{cooman2009,cooman2008}.
 Rather remarkably, these algorithms can easily deal with different types of model uncertainty, even for stochastic processes that drop the usual independence or stationarity assumptions.
+}
+
+\emph{Imprecise Markov chains}
+
+*** Explain how they combine Markov chains with IP. 
+Discuss the generality of the model (individual elements do not need be Markovian).
+Explain how, despite the generally rather extreme complexity of IP, this turns out not to be the case for imprecise Markov chains. Discuss the many (surprisingly strong) results that have already been developed for imprecise discrete-time Markoc chains, but that in contrast, very little is known about imprecise continuous-time Markov chains. ***
+
+
+{\color{Gray}
+Some old text on the topic that could be reused and/or rephrased:
 
 It should therefore not be surprising that these algorithms can be used to perform robust queueing analyses. Indeed, the algorithm in Reference \cite{cooman2008} was essential to the results in Reference~\cite{2015Lopatatzidis}, where the authors considered a discrete-time queue of finite length with a single server and Bernoulli arrivals and departures, and robustified it in the following way.
 Instead of assuming that the probability of a Bernoulli arrival (or departure) is known exactly, they assumed that this parameter takes (unknown) values in some known interval. They also allowed this parameter to be non-stationary, and dropped the stochastic independence assumption by replacing it by weaker imprecise independence notions, such as repetition independence and epistemic irrelevance.
 Even with all these layers of robustness in place, it was still possible to efficiently perform queueing analyses with this model, and these analyses furthermore led to some surprising new insights. For example, in the precise case, it follows from ergodicity that the limiting distribution of the number of customers is equal to their time-averaged distribution. However, because ergodicity breaks down in the imprecise case~\cite{deCooman2015}, these two distributions are not equally robust: the analysis in Reference~\cite{2015Lopatatzidis} showed that dropping the independence assumption can result in substantial changes to the steady state state distribution, but that the effect on the time-averaged distribution is less profound.
 
-%This is a consequence of the fact that ergodicity does not necessarily hold for imprecise Markov chains with finite state sets, something which has been proven in \todo{\cite{deCooman2015} @Jasper: Of vertel ik hier onzin?}.
-
-%\todo{Joris: het bovenstaande vind ik een beetje (te?) uitgebreid}
 
 Nevertheless, despite this initial success and the new insights that resulted from it, there is still an important mismatch between imprecise probability theory and queueing models.
 On the one hand, most of queueing theory is developed for continuous-time models: although synchronization in telecommunication networks has sparked a surge of analyses of discrete-time models from the nineties onwards, continuous-time models are still the standard.
 On the other hand, imprecise probability theory has advanced almost unanimously for discrete-time stochastic processes.
 Imprecise continuous-time models have been explored only very recently \cite{Skulj2015,Troffaes+GSB-ISIPTA15p}, and many basic theoretical and computational problems have yet to be solved.
+}
 
 \vspace{3mm}
 
