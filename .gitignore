@@ -2,3 +2,8 @@
 *.log
 *.out
 *.pdf
+*.synctex.gz
+*.fls
+*.fdb_latexmake
+*.blg
+*.bbl
