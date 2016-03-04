@@ -7,3 +7,5 @@
 *.fdb_latexmake
 *.blg
 *.bbl
+Research-Proposal.fdb_latexmk
+.DS_Store
