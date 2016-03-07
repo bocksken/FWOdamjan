@@ -419,51 +419,47 @@ Describe the different envisaged steps in your research, including intermediate 
 Show where the proposed methodology is according to the state of the art and where it is novel.
 Enclose risks that might endanger reaching project objectives and the contingency plans to be put in place should risk occur.}
 
-*** general explanation that we consider three lines of research, which will start to cross and cooperate as the project progresses, and that we additionally consider time reversibility, as an optional topic that stretches over (and requires) all three lines of research that serves as a backup plan and/or extra toppic if time permits. ***
+*** general explanation that we consider three main lines of research, which will start to cross and cooperate as the project progresses, and that we additionally consider time reversibility and applications, as optional topics that stretch over (and require) all three lines of research, which serve as backup plans and/or extra toppics if time permits. ***
 
-\emph{JOINT MODELS} (tentative title) {\bf (Work Package 1)} {\bf\color{blue} (JASPER/GERT)}
+\vspace{5pt}
+\emph{Joint models and basic properties} {\bf (Research Line 1)}.\\[5pt]
 
-*** add text ***
+The first goal of this project is to develop a rigourous martingale-theoretic and measure-theoretic definition for the joint model of a continuous-time imprecise Markov chains, and to use this model to generalize a number of basic theoretical properties of precise continuous-time Markov chains. %This research will be conducted by a single student, under the close supervision of the IP unit of the Data Science Lab, and can be divided into the following six work packages.
+This research can be divided into the following three work packages.
 
-theoretical framework for stochastic processes in continuous time
+\vspace{6pt}
+\begin{itemize}
+% \item[\tiny$\blacksquare$]
+% The first step in this line of research will be for the student to \emph{study the relevant existing literature on imprecise probabilities and imprecise stochastic processes} as described above, and to familiarise herself thoroughly with measure-theoretic and martingale-theoretic approaches to probability {\bf(Work Package 1a)}.
+\item[\tiny$\blacksquare$]
+The first step of this line of research will consist in \emph{investigating how to define an imprecise probability tree, and in particular an imprecise Markov chain, in continuous time}: what are the possible paths and nodes, how can we define local imprecise probability models attached to these nodes, and how do we formulate a Markov condition for them?
+In addition, it must be investigated how to define the submartingales associated with such a continuous-time imprecise probability tree, and whether and how this definition simplifies when we impose the Markov condition {\bf(Work Package~1a)}.
+To achieve this, we can draw inspiration from earlier game-theoretic probability work done by Volodya Vovk in characterising the (precise) probability tree associated with continuous-time Brownian motion \cite{vovk2008:brownian,vovk2012:emergence:of:probability}, which is a special case of a Markov chain with fully independent local models.
+%Indeed, much of the this line of research can be seen to consist in generalising and extending his ideas from Brownian motion to Markov chains.
+%Therefore, the fact that solid and very interesting results can be obtained for Brownian motion---which is a special case of a Markov chain with fully independent local models---strongly indicates that the present line of research is indeed feasible, though not trivial.
 
-*** probability trees, imprecise probability trees, martingales and submartingales, joint models, properties, ... ***
-
-*** Connection with submartingales and game-theoretic probability (has been succesfully developed for discrete-time imprecise Markov chains, but not for continuous-time ones) ***
-
-{\color{Gray}
-The first step in this project will be to \emph{study the relevant existing literature on imprecise probabilities and imprecise stochastic processes} as described above, and to familiarise herself thoroughly with measure-theoretic and martingale-theoretic approaches to probability {\bf(Work Package 1)}.
-
-The second step consists in \emph{investigating how to define an imprecise probability tree, and in particular an imprecise Markov chain, in continuous time}: what are the possible paths and nodes, how can we define local imprecise probability models attached to these nodes, and how do we formulate a Markov condition for them?
-In addition, it must be investigated how to define the submartingales associated with such a continuous-time imprecise probability tree, and whether and how this definition simplifies when we impose the Markov condition {\bf(Work Package 2)}.
-To achieve this, we can draw inspiration from earlier game-theoretic probability work done by Volodya Vovk in characterising the (precise) probability tree associated with continuous-time Brownian motion \cite{vovk2008:brownian,vovk2012:emergence:of:probability}.
-Indeed, much of the current research plan can be seen to consist in generalising and extending these ideas from Brownian motion to Markov chains.
-Therefore, the fact that solid and very interesting results can be obtained for Brownian motion---which is a special case of a Markov chain with fully independent local models---strongly indicates that the present proposal is indeed feasible, though not trivial.
-
-In the third step, the mathematical properties of the developed continuous-time imprecise Markov model must be studied {\bf(Work Package 3)}. 
+\item[\tiny$\blacksquare$]
+In a second step, the mathematical properties of the developed continuous-time imprecise Markov model must be studied {\bf(Work Package 1b)}. 
 The most important work here will be to obtain an expression for the joint probability model---a so-called lower expectation operator on the sample space of possible paths---amenable to further exploration.
-In particular, it will be useful to see whether, and how, this lower expectation operator can be expressed as a lower envelope of precise expectation operators, each associated with a more traditional, precise stochastic process.
-It may also be interesting, if rapid progress can be made and time allows it, to find out whether---as in the discrete-time case \cite{cooman2015:isipta:markov,cooman2015:markovergodic}---such an expression for the joint will allow for a formulation of ergodic theorems for continuous-time imprecise Markov chains.
+In particular, it will be useful to see whether, and how, this lower expectation operator can be expressed as a lower envelope of precise expectation operators, each associated with a more traditional, measure-theoretic stochastic process.
+%It may also be interesting, if rapid progress can be made and time allows it, to find out whether---as in the discrete-time case \cite{cooman2015:isipta:markov,cooman2015:markovergodic}---such an expression for the joint will allow for a formulation of ergodic theorems for continuous-time imprecise Markov chains.
 
-The fourth step consists in establishing mathematical results that allow us to make inferences about the lower and upper bounds on the expectations of certain interesting functions of the states at different times {\bf(Work Package~4)}.
+\item[\tiny$\blacksquare$]
+The final step of this line of research consists in establishing mathematical results that allow us to make inferences about the lower and upper bounds on the expectations of certain interesting functions of the states at different times {\bf(Work Package~1c)}.
 As an important special case, it must be checked whether the model allows for a derivation from first principles of a non-linear variant of the Chapman--Kolmogorov equations, similar to what \v{S}kulj \cite{skulj2015:continuous:bounds} found using more {\itshape ad hoc} arguments.
 The fact that something similar is possible---and fairly straightforward---in the discrete-time case \cite{cooman2008}, should serve as an indication that this is indeed feasible.
 
-The steps discussed above are purely theoretical, and consist of developing a formal framework in which to study continuous-time imprecise Markov chains.
-In order to be able to use these models in practice, this formal framework will need to be complemented with efficient computational methods.
-Step five therefore consists in developing efficient algorithms for calculating lower and upper expectation bounds in a number of interesting and useful special cases {\bf(Work Package 5)}.
-
-As ought to be clear from the discussion above, the proposed research does not work towards a specific application, nor does it try to build an ad-hoc model for some specific problem.
-Instead, the aim is to begin building a general framework for robust continuous-time Markov chains.
-Nevertheless, if we succeed in doing so, then of course, this framework can be used to study and solve a variety of problems, in interesting areas of application, such as for instance bio-informatics or queueing {\bf(Work Package 6)}. 
-The choice of applications will of course depend on the level of complexity that the developed framework will by then be able to deal with.
-}
+\end{itemize}
+\vspace{6pt}
 
 
-\emph{COMPUTATIONAL STUFF} (tentative title, feel free to change) {\bf (Work Package 2)}
+
+\emph{COMPUTATIONAL STUFF} (tentative title, feel free to change) {\bf (Research Line 2)}
 {\bf\color{blue} (DAMJAN)}
 
 *** add text ***
+
+Develop computational methods for imprecise continuous-time Markov chains and conduct a theoretical analysis of the efficiency of these methods, with a particular focus on aspects such as convergence speed (coefficients of ergodicity) and stability (perturbation analysis).
 
 (feel free to change the order of the sub-workpackages as you like...)
 
@@ -476,6 +472,14 @@ The choice of applications will of course depend on the level of complexity that
 {\bf (Work Package 2b)}: computing lower expectations on a single time point, conditional on initial state, for large values of $t$ (for which current methods are now still exponential)
 
 *** add text ***
+
+{\color{Gray}
+old text that may be useful:
+
+The steps discussed above are purely theoretical, and consist of developing a formal framework in which to study continuous-time imprecise Markov chains.
+In order to be able to use these models in practice, this formal framework will need to be complemented with efficient computational methods.
+Step five therefore consists in developing efficient algorithms for calculating lower and upper expectation bounds in a number of interesting and useful special cases
+}
 
 
 analysis of the limit behaviour of imprecise continuous time Markov processes
@@ -502,10 +506,12 @@ The existing methods capable of providing bounds of distributions at given finit
  An indispensable tool for evaluating convergence in terms of how close are the results to the true values is the metric structure of the imprecise probability models. In this area a big gap exists between the theory and practice. We will reduce this gap by providing efficient methods for calculating the distances between imprecise probability models. The models of imprecise probabilities are usually evaluated as solutions of linear programming problems or, especially in the theory of imprecise Markov chains as sequences of several linear programming problems. Therefore a lot of computational effort is needed to obtain values of parameters, and consequently there is usually only a limited numbers of parameters at disposal. We will therefore look for the methods that will enable estimating the distances between imprecise probability models based on their partial identification. To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems. 
 
 
-\emph{STUDY OF LIMIT DISTRIBUTIONS} (tentative title) {\bf (Work Package 3)} 
+\emph{STUDY OF LIMIT DISTRIBUTIONS} (tentative title) {\bf (Research Line 3)} 
 {\bf\color{blue} (JASPER/GERT and DAMJAN)}
 
 *** add text ***
+
+Study and characterize the limit behaviour of imprecise continuous-time Markov chains: ``Under which conditions will they converge to a stationary limit distribution?'', ``What properties does such a limit distribution have?'' and ``How can we efficiently compute it?''. 
 
 {\bf (Work Package 3a)}: do we always have (state-dependent) convergence? {\bf\color{blue} (JASPER/GERT)}
 
@@ -528,11 +534,16 @@ Find direct methods to calculate long term distributions for uniquely convergent
 
 *** Theoretical framework for reversible imprecise Markov chains, including time reversal in general. Are time reversed imprecise Markov processes even still Markovian etc. ***
 
+\emph{APPLICATIONS} (tentative title, feel free to change) {\bf (Work Package 5)} 
+{\bf\color{blue} (???)}
 
 Time reversal is an important concept in the theory of stochastic processes and has not yet been systematically studied under the framework of imprecision, with the exception of \cite{skulj:16}. A systematic analysis of time reversed processes and reversible Markov chains will therefore be conducted. The first task is a formal approach to time reversal for processed based on imprecise probabilities. This is a theoretically challenging task, since the concept applies techniques, such as conditioning and Bayes rule, whose applications to imprecise probability models substantially differ from their use in the classical models. We must first answer the question whether a time reversed imprecise Markov chain is still Markovian if it is imprecise, and what properties does it have. The next task is to identify reversible imprecise Markov chains, which are those, whose properties do not change if they are reversed. Along with the theoretical questions we will explore practical/computational aspects of the model proposed in \cite{skulj:16} extended to the continuous time framework. 
 
 
-
+As ought to be clear from the discussion above, the proposed research does not work towards a specific application, nor does it try to build an ad-hoc model for some specific problem.
+Instead, the aim is to begin building a general framework for robust continuous-time Markov chains.
+Nevertheless, if we succeed in doing so, then of course, this framework can be used to study and solve a variety of problems, in interesting areas of application, such as for instance bio-informatics or queueing {\bf(Work Package 6)}. 
+The choice of applications will of course depend on the level of complexity that the developed framework will by then be able to deal with.
 
 
 % ## Addedd by Damjan
