@@ -315,22 +315,6 @@ Once we recognise this, going to imprecise stochastic processes becomes fairly s
 
 *** some text to create a link with the next subsection ***
 
-\emph{State of the art on imprecise discrete-time Markov chains} {\bf\color{blue}(DAMJAN)}
-
-*** Discuss all the different things that have already been succesfully studied in some detail, and especially the things that we intend to generalize to continuous time in this project (except for martingale stuff, because that's already discussed in the previous subsection) ***
-
-{\color{Gray}
-Some old text on the topic that could be reused and/or rephrased:
-
-Nevertheless, for the special case of discrete time imprecise stochastic processes, recent breakthroughs have led to the discovery of some powerful theoretical properties, which in turn have led to the development  of efficient (often linear or polynomial) algorithms~\cite{cooman2009,cooman2008}.
-Rather remarkably, these algorithms can easily deal with different types of model uncertainty, even for stochastic processes that drop the usual independence or stationarity assumptions.
-
-These algorithms can be used to perform robust queueing analyses~\cite{2015Lopatatzidis}.
-}
-
-
-<<<<<<< HEAD
-
 \emph{State of the art on imprecise discrete-time Markov chains} {\bf\color{blue} (DAMJAN)}
 
 *** Discuss all the different things that have already been succesfully studied in some detail (especially the things that we intend to generalize to continuous time in this project) ***
@@ -361,13 +345,8 @@ Another important question in the theory of Markov chains is time reversal, and 
 
 Continuous time theory of imprecise Markov chains is still at its beginning. An attempt to modelling imprecision in continuous time Markov was made by Škulj in \cite{skulj2015}, where the ideas from the discrete time theory have been used to define a set of transition rates and the corresponding upper and lower bound operators. The Kolmogorov's backward equation was then studied where a precise transition rate matrix was replaced by the so defined imprecise one. Thus a generalized differential equation was obtained and it was proved that its maximal and solutions exist and that they contain every possible solution of a generalised continuous time imprecise Markov chain. But the boundary solutions can only be found numerically using approximations. Although, an efficient method is proposed, the errors grow exponentially in time, which hinders its use to funding long term or limit distributions.
 
-=======
-\vspace{5pt}
-\emph{State of the art on imprecise continuous-time Markov chains} {\bf\color{blue}(DAMJAN)}\\[5pt]
-*** Discuss what has been done already and explain that most problems are still open. ***
 
 (perhaps it is a good idea to also mention related fields, such as continuous-time Markov decision processes, continuous-time controlled Markov chains, interval continuous-time Markov chains, ... )
->>>>>>> 57145252a9e370bc435024e8742549b311373a57
 
 {\color{Gray}
 Some old text on the topic that could be reused and/or rephrased:
@@ -404,7 +383,18 @@ However, for \emph{imprecise} continuous-time Markov chains, these lines of rese
 %Therefore, we believe that this research could lead to a breakthrough in applied imprecise probability: if succesful, our results will provide a theoretical basis that allows for the application of imprecise continuous-time Markov chains in the very same domains where precise continuous-time Markov chains are currently being used.
 Our research hypothesis is that by developing these three lines of research, it would become technically feasible to succesfully apply imprecise continuous-time Markov chains to the same problems that are currently solved with their precise versions.
 
-<<<<<<< HEAD
+The practical advantage of such an imprecise approach would be that it explicitly acknowledges that we may not know the relevant probabilistic models exactly, and that, as a result, our inferences must be robust against such model uncertainty. 
+The framework of results and inference methods to be developed will be able to predict the effect of this model uncertainty on specific interesting functions of state variables, for example by providing lower and upper bounds on their expected values. 
+The results of such inferences can then be used in various applications and situations, for instance to make safer design choices that are much more robust against modelling errors.
+
+The proposed research is unconventional from the perspective of both domains that intersect in this project.
+First of all, from the point of view of Markov chain theory, our approach is unconventional because it breaks with two traditional assumptions: the Markov condition is replaced by a weaker version, and the probabilities that make up the model do not have to be specified exactly. Secondly, from an imprecise probability perspective, this project is unconventional because time is taken to be continuous, whereas past research on imprecise stochastic processes has focussed almost unanimously on discrete-time problems.
+
+Due to this unconventional nature of the proposed research, and because the topic is largely unexplored, this project will clearly be challenging. 
+However, given the extensive experience of both partners in studying various aspects of imprecise \emph{discrete-time} stochastic processes~\cite{cooman2007d,cooman2008,hermans2012,cooman2015:markovergodic,cooman2015:isipta:markov}, we are convinced that we have the necessary background to successfully tackle similar research problems in continuous time.
+
+*** The text below was added here by Damjan, but I think it is to detailed for the objectives section, and that it would be a better fit the methodology section ***
+
 Limit behaviour is one of the central questions in the theory of Markov chains. In the precise case linear algebra provides powerful tools for the analysis of the limit behaviour, which unfortunately fail in general when it comes to imprecise Markov chains. 
 Our first task will be to find robust methods for the analysis of convergence and finding the limit distributions. 
 As it seems very unlikely that this would be possible to be done analytically, we will rely on some kinds of numerical methods, which even in the case of a very optimistic scenario will most likely be computationally intensive. 
@@ -441,21 +431,6 @@ One is the calculation of the distances between upper and lower previsions.
 Another related problem is the estimation of the maximal distance between upper and lower previsions that are only partially specified. 
 Known numerical examples suggest that these problems are both challenging and interesting. 
 
-
-
-Why is it important:
-=======
-The practical advantage of such an imprecise approach would be that it explicitly acknowledges that we may not know the relevant probabilistic models exactly, and that, as a result, our inferences must be robust against such model uncertainty. 
-The framework of results and inference methods to be developed will be able to predict the effect of this model uncertainty on specific interesting functions of state variables, for example by providing lower and upper bounds on their expected values. 
-The results of such inferences can then be used in various applications and situations, for instance to make safer design choices that are much more robust against modelling errors.
-
->>>>>>> ee60612b3034db42ef5c7fbf1df1918c9a056f84
-
-The proposed research is unconventional from the perspective of both domains that intersect in this project.
-First of all, from the point of view of Markov chain theory, our approach is unconventional because it breaks with two traditional assumptions: the Markov condition is replaced by a weaker version, and the probabilities that make up the model do not have to be specified exactly. Secondly, from an imprecise probability perspective, this project is unconventional because time is taken to be continuous, whereas past research on imprecise stochastic processes has focussed almost unanimously on discrete-time problems.
-
-Due to this unconventional nature of the proposed research, and because the topic is largely unexplored, this project will clearly be challenging. 
-However, given the extensive experience of both partners in studying various aspects of imprecise \emph{discrete-time} stochastic processes~\cite{cooman2007d,cooman2008,hermans2012,cooman2015:markovergodic,cooman2015:isipta:markov}, we are convinced that we have the necessary background to successfully tackle similar research problems in continuous time.
 
 
 \vspace{7pt}
