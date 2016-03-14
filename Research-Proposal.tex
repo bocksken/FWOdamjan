@@ -46,16 +46,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \pagenumbering{roman}
 
-{\bf Date of the application} \tab 1 April 2016 \\
+{\bf Date of the application} \tab\tab 1 April 2016 \\
+{\bf Official internal deadline Ghent university} \tab 15 March 2016 \\
+{\bf Unofficial internal deadline Ghent university} \tab {\bf\color{blue}24 March 2016} \\
 
-
-{\bf\color{blue} GHENT UNIVERSITY HAS AN INTERNAL DEADLINE: 15TH OF MARCH!!!! (after submission, ugent first checks the projects administratively, and then sends them through to FWO. We could go beyond this internal deadline if necessary, but only if we explicitely ask this, and not more than a week)}
-
-{\bf\color{blue} We moeten daarvoor Barbara Lobert contacteren (VOOR 15 MAART), met vermelding van de hoofdpromotor de datum wanneer we zullen indienen (zeker een week voor de echte FWO deadline van 1 april!)}
-
-
-
-\vspace{10pt}
+%\vspace{2pt}
 
 \begin{shaded}\centering GENERAL \end{shaded}
 \textbf{Title of your research proposal} (\textcolor{Gray}{39/240 characters})\\
@@ -539,14 +534,15 @@ Describe the different envisaged steps in your research, including intermediate 
 Show where the proposed methodology is according to the state of the art and where it is novel.
 Enclose risks that might endanger reaching project objectives and the contingency plans to be put in place should risk occur.}
 
-*** general explanation that we consider three main lines of research, which will start to cross and cooperate as the project progresses, and that we additionally consider time reversibility and applications, as optional topics that stretch over (and require) all three lines of research, which serve as backup plans and/or extra toppics if time permits. *** {\bf\color{blue} (JASPER)}
+As explained in the objectives section, we intend to persue three lines of research, each of which has been very succesful in the precise case, but none of which has so far made significant progress in the imprecise case; a detailed plan for all of them is outlined below. Each of these three lines of research will initially be carried out by a separate full time PhD student, under the close supervision of the (co-)supervisors and a part-time senior researcher. As time and research progresses, we expect these lines of research to mutually benefit from each other, leading to intensive collaborations between the respective students and their supervisors. Concrete topics of collaboration are discussed within the following detailed plans.
+
 
 
 \vspace{5pt}
 \emph{Joint models and basic properties} {\bf (Research Line 1)}.
 \vspace{3pt}
 
-The first goal of this project is to develop a rigourous martingale-theoretic and measure-theoretic definition for the joint model of a continuous-time imprecise Markov chains, and to use this model to generalize a number of basic theoretical properties of precise continuous-time Markov chains. %This research will be conducted by a single student, under the close supervision of the IP unit of the Data Science Lab, and can be divided into the following six work packages.
+A first important goal of this project is to develop a rigourous martingale-theoretic and measure-theoretic definition for the joint model of a continuous-time imprecise Markov chains, and to use this model to generalize a number of basic theoretical properties of precise continuous-time Markov chains. %This research will be conducted by a single student, under the close supervision of the IP unit of the Data Science Lab, and can be divided into the following six work packages.
 This research can be divided into the following three work packages.
 
 \vspace{6pt}
@@ -556,7 +552,7 @@ This research can be divided into the following three work packages.
 \item[\tiny$\blacksquare$]
 The first step of this line of research will consist in \emph{investigating how to define an imprecise probability tree, and in particular an imprecise Markov chain, in continuous time}: what are the possible paths and nodes, how can we define local imprecise probability models attached to these nodes, and how do we formulate a Markov condition for them?
 In addition, it must be investigated how to define the submartingales associated with such a continuous-time imprecise probability tree, and whether and how this definition simplifies when we impose the Markov condition {\bf(Work Package~1a)}.
-To achieve this, we can draw inspiration from earlier game-theoretic probability work done by Volodya Vovk in characterising the (precise) probability tree associated with continuous-time Brownian motion \cite{vovk2008:brownian,vovk2012:emergence:of:probability}, which is a special case of a Markov chain with fully independent local models.
+To achieve this, we can draw inspiration from earlier game-theoretic probability work done by Volodya Vovk in characterising the (precise) probability tree associated with continuous-time Brownian motion \cite{vovk2008:brownian,vovk2012:emergence:of:probability}, which is a special case of a Markov chain.% with fully independent local models.
 %Indeed, much of the this line of research can be seen to consist in generalising and extending his ideas from Brownian motion to Markov chains.
 %Therefore, the fact that solid and very interesting results can be obtained for Brownian motion---which is a special case of a Markov chain with fully independent local models---strongly indicates that the present line of research is indeed feasible, though not trivial.
 
@@ -720,7 +716,17 @@ Find direct methods to calculate long term distributions for uniquely convergent
 
 Within {\bf (Work Package 3c)} we will analyse the structure of the stationary and limit distributions. The nature of imprecise models allows a richer range of classes of states and transitions between them than in the precise case. We will investigate the induced accessibility relations and their influence on convergence, especially when it is not unique. We will also characterize and classify the invariant distributions. For the starting point we will extend the methodology from \cite{skulj:13b}, where a partial classification of invariant sets for the discrete time imprecise Markov chains was proposed, to the continuous time models. 
 
-*** add text ***
+
+\vspace{5pt}
+\emph{Unforseen circumstances, risks and contingency plans} %{\bf (Work Packages 4 \& 5)} 
+\vspace{3pt}
+
+Although we expect to reach the majority of the above goals, it might of course happen that we do not. For example, some types of performance measures might turn out to be inherently intractable to compute with, or we might come across stochastic processes for which adding three layers of robustness (allowing their parameters to be interval-valued,  time- and history dependent) results in a model that is simply too complex to work with. However, even if we were to come across such problems, this will not endanger the global aim of the first part of this project, which is to develop robust continuous-time queueing models. Indeed, there are various types of stochastic processes, increasingly complex ways of adding robustness, and many performance measures of interest. Adding a modest amount of robustness to simple queueing models will definitely be possible, and this alone suffices to continue with the rest of this project. However, of course, our intention is to go much further: ideally, we would like to develop a general framework for working with robust continuous-time queueing models.
+
+At this point, we envision that this last topic will only be marginally treated in the project. However, if necessary, it does provide us with a contingency plan that is of independent interest.
+
+
+and that we additionally consider time reversibility and applications, as optional topics that stretch over (and require) all three lines of research, which serve as backup plans and/or extra toppics if time permits.
 
 \vspace{5pt}
 \emph{Time reversibility} {\bf (Work Package 4)} 
