@@ -536,7 +536,7 @@ Describe the different envisaged steps in your research, including intermediate 
 Show where the proposed methodology is according to the state of the art and where it is novel.
 Enclose risks that might endanger reaching project objectives and the contingency plans to be put in place should risk occur.}
 
-As explained in the objectives section, we intend to persue three lines of research, each of which has been very succesful in the precise case, but none of which has so far made significant progress in the imprecise case; a detailed plan for all of them is outlined below. Each of these three lines of research will initially be carried out by a separate full time PhD student, under the close supervision of the (co-)supervisors and a part-time senior researcher. As time and research progresses, we expect these lines of research to mutually benefit from each other, leading to intensive collaborations between the respective students and their supervisors. Concrete topics of collaboration are discussed within the following detailed plans.
+As explained in the objectives section, we intend to persue three lines of research, each of which has been very succesful for precise continuous-time Markov chains, but none of which has so far made significant progress in the imprecise case; a detailed plan for all of them is outlined below. Each of these three lines of research will initially be carried out by a separate full time PhD student, under the close supervision of the (co-)supervisors and a part-time senior researcher. As time and research progresses, we expect these lines of research to mutually benefit from each other, leading to intensive collaborations between the respective students and their supervisors. Concrete topics of collaboration are discussed within the following detailed plans.
 
 
 
@@ -559,24 +559,19 @@ To achieve this, we can draw inspiration from earlier game-theoretic probability
 %Therefore, the fact that solid and very interesting results can be obtained for Brownian motion---which is a special case of a Markov chain with fully independent local models---strongly indicates that the present line of research is indeed feasible, though not trivial.
 
 \item[\tiny$\blacksquare$]
-In a second step, the mathematical properties of the developed continuous-time imprecise Markov model must be studied {\bf(Work Package 1b)}. 
-The most important work here will be to obtain an expression for the joint probability model---a so-called lower expectation operator on the sample space of possible paths---amenable to further exploration.
-In particular, it will be useful to see whether, and how, this lower expectation operator can be expressed as a lower envelope of precise expectation operators, each associated with a more traditional, measure-theoretic stochastic process.
+In a second step, we intend to use the results of the first step to obtain an expression for the joint probability model---a so-called lower expectation operator on the sample space of possible paths---of an imprecise continuous-time Markov chain, amenable to further exploration {\bf(Work Package 1b)}.
+We will also investigate whether, and how, this lower expectation operator can be expressed as a lower envelope of precise expectation operators, each associated with a more traditional, measure-theoretic stochastic process.
 %It may also be interesting, if rapid progress can be made and time allows it, to find out whether---as in the discrete-time case \cite{cooman2015:isipta:markov,cooman2015:markovergodic}---such an expression for the joint will allow for a formulation of ergodic theorems for continuous-time imprecise Markov chains.
 
 \item[\tiny$\blacksquare$]
-The final step of this line of research consists in establishing mathematical results that allow us to make inferences about the lower and upper bounds on the expectations of certain interesting functions of the states at different times {\bf(Work Package~1c)}.
-As an important special case, it must be checked whether the model allows for a derivation from first principles of a non-linear variant of the Chapman--Kolmogorov equations, similar to what \v{S}kulj \cite{skulj2015:continuous:bounds} found using more {\itshape ad hoc} arguments.
-The fact that something similar is possible---and fairly straightforward---in the discrete-time case \cite{cooman2008}, should serve as an indication that this is indeed feasible.
-
+The final step of this line of research consists in studying the mathematical properties of the developed continuous-time imprecise Markov model {\bf(Work Package 1c)}.
+As a first important special case, we intend to check whether the model allows for a derivation from first principles of a non-linear variant of the Chapman--Kolmogorov equations, similar to what \v{S}kulj \cite{skulj2015:continuous:bounds} found using more {\itshape ad hoc} arguments.
+The fact that something similar is possible---and fairly straightforward---in the discrete-time case \cite{cooman2008}, should serve as an indication that this is indeed feasible. A second important special case will be to define stopping times, and to study their basic properties.\vspace{8pt}
 \end{itemize}
+
+*** We expect that these results will enable us to develop explicit methods for computing expectations of important stopping times---such as the expected time to absorption and expected return times---and probabilities of general events---such as the probability of absorption or reaching a state. ***
+
 \vspace{8pt}
-
-*** \emph{Stopping times} The goal is the analysis of specific and general stopping times. 
-Stopping times for the theory of imprecise continuous time random processes will be defined and their basic properties will be studied. 
-Explicit methods for calculating expectations for the most important stopping times will be developed for times such as expected time to absorption, expected return times. 
-We will also analyse probabilities of general events such as probability of absorption and reaching probability. ***
-
 
 
 \emph{Computational methods} {\bf (Research Line 2)}.
@@ -584,6 +579,9 @@ We will also analyse probabilities of general events such as probability of abso
 \vspace{3pt}
 
 (tentative title, feel free to change)
+
+
+*** The final step of this line of research consists in establishing mathematical results that allow us to make inferences about the lower and upper bounds on the expectations of certain interesting functions of the states at different times. ***
 
 While in the case of precise Markov chains methods of linear algebra are used, methods of linear programming are used when it comes to imprecise Markov chains. 
 This difference means, inter alia, that in vast majority of times, solutions are obtained in numerical form.
