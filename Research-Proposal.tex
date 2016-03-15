@@ -315,18 +315,18 @@ For the integral regulations on internal and external peer review, see: http://w
 \begin{shaded}\centering EXTRA DATA \end{shaded}
 
 \textbf{Mention other funding, applied for elsewhere or already available. (Optional)}\\
-\textcolor{Gray}{???/3000}\\
+\textcolor{Gray}{0/3000}\\
 
-{\color{blue}\bf This part should only mention funding that is related to the same project proposal} 
+% {\color{blue}\bf This part should only mention funding that is related to the same project proposal} 
 
-I would suggest to leave it empty...
+% I would suggest to leave it empty...
 
-*** should we mention the projects of Stavros and Alexander? ***
+% *** should we mention the projects of Stavros and Alexander? ***
 
-@Damjan: do you have stuff that should be mentioned here?
+% @Damjan: do you have stuff that should be mentioned here?
 
-I am a member of the research group: Social Sciences Methodology, Statistics and Informatics; 
-Code	P5-0168 (B); Period	1.1.2015 - 31.12.2020; Head:	Ferligoj Anuška
+% I am a member of the research group: Social Sciences Methodology, Statistics and Informatics; 
+% Code	P5-0168 (B); Period	1.1.2015 - 31.12.2020; Head:	Ferligoj Anuška
 
 \vspace{7pt}
 
@@ -596,7 +596,8 @@ As a first important special case, we intend to check whether the model allows f
 The fact that something similar is possible---and fairly straightforward---in the discrete-time case \cite{cooman2008}, should serve as an indication that this is indeed feasible. A second important special case will be to define stopping times, and to study their basic properties.\vspace{8pt}
 \end{itemize}
 
-*** We expect that these results will enable us to develop explicit methods for computing expectations of important stopping times---such as the expected time to absorption and expected return times---and probabilities of general events---such as the probability of absorption or reaching a state. ***
+Since the Chapman-Kolmogorov equations and stopping times lie at the basis of many computational methods for (precise) continuous-time Markov chain, we expect Work Package~1c to yield results that are useful to advance the second---computational---line of research that we are about to introduce (especially Work Package~2b). In order to take advantage of this overlap, we will provide the respective PhD students with the opportunity to collaborate on these topics.
+
 
 \vspace{8pt}
 
@@ -604,13 +605,13 @@ The fact that something similar is possible---and fairly straightforward---in th
 \emph{Computational methods} {\bf (Research Line 2)}.
 \vspace{3pt}
 
+While the theory of precise Markov chains often relies heavily on linear algebra, this is no longer true for imprecise Markov chains, for which one has to resort to linear programming techniques. Consequently, in the vast majority of cases, solutions have to be obtained in numerical form.
+Computational methods are therefore an important aspect that has to be developed along with theoretical concepts. 
+The second general goal of this project is therefore to develop and improve numerical methods. This line of research can be divided into the following four work-packages.
 
-*** The final step of this line of research consists in establishing mathematical results that allow us to make inferences about the lower and upper bounds on the expectations of certain interesting functions of the states at different times. ***
 
-While in the case of precise Markov chains methods of linear algebra are used, methods of linear programming are used when it comes to imprecise Markov chains. 
-This difference means, inter alia, that in vast majority of times, solutions are obtained in numerical form.
-Computational methods are therefore an important part that has to be developed along with theoretical concepts. 
-The second general goal of the project is therefore to develop an improve numerical methods. 
+
+
 %This is especially true for the continuous time case, because in principle we would have infinite number of time steps where a linear programming problems would have to be solved. 
 %Instead of that we have to do some kind of discretization. 
 %But this approach generates errors, that have to be managed. 
@@ -619,44 +620,25 @@ The second general goal of the project is therefore to develop an improve numeri
 %The reason is that they are based on the theory of differential equations whose bounds grow exponentially in time.
 
 
-This research can be divided into the following four work-packages.
+
 
 \vspace{6pt}
 \begin{itemize}
-\item[\tiny$\blacksquare$]  
-The first task {\bf(Work Package 2a)} is to improve the existing methods for calculating bounds of distributions at given finite time points~\cite{skulj2015:continuous:bounds}, which fail when it time intervals grow large and especially, when the limit distributions are in question. A way to overcome this difficulty is to exploit the contracting nature of Markov transition operators, which has been successfully applied in the discrete time imprecise Markov chains. 
-
-\item[\tiny$\blacksquare$] 
-The second task {\bf(Work Package 2b)} is error estimation. 
-Regardless of particular methods, errors in estimations seem to be inevitable in the continuous time models, where only a finite number of optimization steps are feasible, despite the fact that optimization would actually be needed in every time point. 
-The errors are at every step transferred to next steps as perturbations. 
-The existing error estimates work well for short time intervals, while in the cases with larger time intervals they significantly overestimate the errors even for the existing methods, as has been shown by examples. 
-
-\item[\tiny$\blacksquare$] 
-An important part of the error estimation is perturbation analysis, which is also of an independent interest and will be explored as a separate research task {\bf(Work Package 2c)}. 
-We will analyse how perturbations of the parameters affect the distance between the perturbed and original Markov chain. 
-This is even more important in the continuous than discrete time models.
-%, because as it seems, there is virtually impossible to do any calculations precisely. By precision we now mean getting the precise bounds on the probabilities. Namely, even though we allow imprecision in the probability models, our goal is getting the exact degree of imprecision that we must account with. Therefore, most of the methods will offer some kind of compromise between precision and time efficiency which will have to be balanced. 
-Perturbation analysis has been previously successfully applied to the discrete time models. 
-%To extend it to the continuous time case we will generalise the methodology from the perturbation theory in the precise case. 
-%For this part we will use the results of previous work-packages. 
-
 \item[\tiny$\blacksquare$]
-Methods for calculation of the coefficients of ergodicity or possibly additional measures of contraction will be the topic of {\bf(Work Package 2d)}. Theoretical definitions are often insufficient to allow their practical calculations. The problems to be solved include calculation of the distances between coherent lower or upper previsions that are only partially specified and the distances between the natural extensions of coherent lower or upper previsions. Known numerical examples suggest that these problems are both challenging and interesting. To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems. 
+The first step in this line of research will be to define and compute coefficients of ergodicity (and possibly also other measures of contraction) for imprecise continuous-time Markov chains {\bf(Work Package 2a)}. By analogy with the discrete-time case, we expect that it will not be possible to evaluate the theoretical definitions directly, but that indirect computational methods will have to be developed. In order to do that, we will need to be able to efficiently compute distances between coherent lower or upper previsions that are only partially specified. Known numerical examples suggest that this problem is challenging but solvable. %To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems. 
+\item[\tiny$\blacksquare$]  
+The next task {\bf(Work Package 2b)} is to develop methods for calculating tight bounds on expected values of functions of the states of an imprecise Markov chain. At first, we intend to extend existing methods for functions that depend on the state at a single time point in the future~\cite{skulj2015:continuous:bounds}, which fail when the time interval grows large. In order to overcome this difficulty, we intend to exploit the contracting nature of Markov transition operators, using the coefficients of ergodicity of Work Package 2a. Later on, we will also try and compute expectations of more general functions, including important stopping times---such as the expected time to absorption and expected return times---and probabilities of general events---such as absorption probabilities.
 
+\item[\tiny$\blacksquare$] 
+The third task {\bf(Work Package 2c)} will be error estimation. 
+Regardless of the particular method that is used, numerical errors seem to be inevitable in continuous time models, where only a finite number of optimization steps are practically feasible, whereas in theory, optimization would actually be needed in every time point. 
+This gives rise to numerical errors, which are at every step transferred to the next steps as perturbations. 
+Existing error estimates work well for short time intervals, but for larger time intervals, as has been observed experimentally for simple problems, they significantly overestimate the errors that are made.
 
-%To measure the rate of convergence we will generalise coefficients of ergodicity, and they require estimating distances between partially specified lower or upper previsions. 
-%The experience from the discrete case suggests that coefficients of ergodicity can be used to do perturbation analysis. 
-%Their calculation brings several new computational challenges. 
-%One is the calculation of the distances between upper and lower previsions. 
-%Another related problem is the estimation of the maximal distance between upper and lower previsions that are only partially specified. 
-
-
-
-%We will therefore first generalise the concept of coefficients of ergodicity, which give criteria for unique convergence on one hand, and measures the rate of convergence on the other. (THIS IS MORE WP2a) Moreover, they can also be used in sensitivity analysis. The second task of this work-package is to improve the accuracy of the calculations for the bounds of probability distributions when the time intervals grow large. This part is necessary to provide approximations for the long term distributions.
-
-
-
+\item[\tiny$\blacksquare$] 
+An important part of the above error estimation will be perturbation analysis, which is also of independent interest and will be therefore be explored as a separate research task {\bf(Work Package 2d)}. 
+We will analyse how perturbations of its parameters affect the distance between an imprecise continuous-time Markov chain and its perturbed version.
+Such a perturbation analysis has previously been successfully applied to imprecise discrete-time Markov chains; we expect it to be equally successful in the continuous-time case.\vspace{8pt}
 \end{itemize}
 
 %%Develop computational methods for imprecise continuous-time Markov chains and conduct a theoretical analysis of the efficiency of these methods, with a particular focus on aspects such as convergence speed (coefficients of ergodicity) and stability (perturbation analysis).
@@ -704,9 +686,11 @@ Methods for calculation of the coefficients of ergodicity or possibly additional
 %
 % An indispensable tool for evaluating convergence in terms of how close are the results to the true values is the metric structure of the imprecise probability models. In this area a big gap exists between the theory and practice. We will reduce this gap by providing efficient methods for calculating the distances between imprecise probability models. The models of imprecise probabilities are usually evaluated as solutions of linear programming problems or, especially in the theory of imprecise Markov chains as sequences of several linear programming problems. Therefore a lot of computational effort is needed to obtain values of parameters, and consequently there is usually only a limited numbers of parameters at disposal. We will therefore look for the methods that will enable estimating the distances between imprecise probability models based on their partial identification. To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems. 
 
-\vspace{5pt}
-%\emph{Stationary limit distributions} {\bf (Research Line 3)}.
-\emph{Limit behaviour} {\bf (Research Line 3)}.
+*** Discuss overlap with previous and next line of research ***
+
+\vspace{8pt}
+\emph{Stationary limit distributions} {\bf (Research Line 3)}.
+%\emph{Limit behaviour} {\bf (Research Line 3)}.
 \vspace{3pt}
 
 %*** add text ***
@@ -741,18 +725,20 @@ Within {\bf (Work Package 3c)} we will analyse the structure of the stationary a
 \emph{Contingency plans} {\bf (Work Packages 4 \& 5)} 
 \vspace{3pt}
 
-Unforseen circumstances, risks and contingency plans
+*** Unforseen circumstances, risks and contingency plans ***
 
-Although we expect to reach the majority of the above goals, it might of course happen that we do not. For example, some types of performance measures might turn out to be inherently intractable to compute with, or we might come across stochastic processes for which adding three layers of robustness (allowing their parameters to be interval-valued,  time- and history dependent) results in a model that is simply too complex to work with. However, even if we were to come across such problems, this will not endanger the global aim of the first part of this project, which is to develop robust continuous-time queueing models. Indeed, there are various types of stochastic processes, increasingly complex ways of adding robustness, and many performance measures of interest. Adding a modest amount of robustness to simple queueing models will definitely be possible, and this alone suffices to continue with the rest of this project. However, of course, our intention is to go much further: ideally, we would like to develop a general framework for working with robust continuous-time queueing models.
+Although we expect to finish each of the work packages that we have just discussed, it might of course happen that we run into some problems. For example, some computations might be inherently intractable, or there might be some theoretical questions that we are unable to solve. However, even if we were to come across such problems, this will not endanger the global aim of this project, which is to make significant progress in the development of the theory of continuous-time Markov chains. Indeed, ...
+
+
 
 At this point, we envision that this last topic will only be marginally treated in the project. However, if necessary, it does provide us with a contingency plan that is of independent interest.
 
 
 and that we additionally consider time reversibility and applications, as optional topics that stretch over (and require) all three lines of research, which serve as backup plans and/or extra toppics if time permits.
 
-\vspace{5pt}
+%\vspace{5pt}
 \emph{Time reversibility} {\bf (Work Package 4)} 
-\vspace{3pt}
+%\vspace{3pt}
 Time reversal is an important concept in the theory of stochastic processes and has not yet been systematically studied under the framework of imprecision, with the exception of \cite{skulj:16}. A systematic analysis of time reversed processes and reversible Markov chains will therefore be conducted. The first task is a formal approach to time reversal for processed based on imprecise probabilities. This is a theoretically challenging task, since the concept applies techniques, such as conditioning and Bayes rule, whose applications to imprecise probability models substantially differ from their use in the classical models. We will examine the possibilities to model time reversal in terms of the models of imprecise probabilities and establish the relation between continuous random walks on weighted graphs, extending the methodology used in  \cite{skulj:16} for the discrete time case. A special emphasis will be on the computational issues. 
 
 
@@ -772,8 +758,6 @@ Time reversal is an important concept in the theory of stochastic processes and 
 %In particular, we will find out under what conditions is a reverse process Markov, and specifically, whether it fits into the framework of imprecise Markov chains examined. 
 %In particular, we will examine the continuous time version of the model of random walks on graphs.  
 %(tentative title, feel free to change)
-
-*** add text ***
 
 *** Theoretical framework for reversible imprecise Markov chains, including time reversal in general. Are time reversed imprecise Markov processes even still Markovian etc. ***
 
