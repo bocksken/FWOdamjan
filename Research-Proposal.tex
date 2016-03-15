@@ -517,6 +517,8 @@ We are only aware of a recent initial analysis by \v{S}kulj \cite{skulj2015:cont
 
 Imprecise probability theory has advanced almost unanimously for discrete-time stochastic processes.
 Imprecise continuous-time models have been explored only very recently \cite{skulj2015:continuous:bounds,Troffaes+GSB-ISIPTA15p}, and many basic theoretical and computational problems have yet to be solved.
+
+Initial study of limit behaviour: \cite{DeBock:2016:iCTMClimit}
 }
 
 \vspace{3mm}
@@ -693,27 +695,20 @@ Such a perturbation analysis has previously been successfully applied to impreci
 %\emph{Limit behaviour} {\bf (Research Line 3)}.
 \vspace{3pt}
 
-Limit behaviour is one of the most crucial topics in the theory of Markov chains, and if a unique stationary distribution exists, then it is often the central object of interest. In the precise case, linear algebra provides powerful tools for the analysis of limit behaviour, and in many cases, the stationary distribution can easily be computed directly, by solving a system of equations. Unfortunately, no such methods are available for imprecise Markov chains. For imprecise discrete-time Markov chains, alternative methods have been developed~\cite{cooman2008}, but in continuous time, only very little is known so far. Therefore, the third main goal of this project is to study and characterize the limit behaviour of imprecise continuous-time Markov chains. This line of research can be divided into the following three work packages.
+Limit behaviour is one of the most crucial topics in the theory of Markov chains, and if a unique stationary distribution exists, then it is often the central object of interest. In the precise case, linear algebra provides powerful tools for the analysis of limit behaviour, but unfortunately, no such methods are available for imprecise Markov chains. For imprecise discrete-time Markov chains, alternative methods have been developed~\cite{cooman2008}, but in continuous time, only very little is known so far. Therefore, the third main goal of this project is to study and characterize the limit behaviour of imprecise continuous-time Markov chains. This line of research can be divided into the following three work packages.
 
 
 \vspace{6pt}
 \begin{itemize}
-\item[\tiny$\blacksquare$]
-The first task in this line of research will be to find out under which conditions an imprecise continuous-time Markov chain converges to a limit distribution {\bf (Work Package 3a)}. In cases where such a limit distribution exists, we will also characterise the conditions under which it depends on the initial state of the chain and the conditions under which it is stationary. In discrete time, such a study has already been conducted successfully~\cite{hermans2012,cooman2008}. In continuous time however, we are only aware of some partial answers *** REFS ***. 
+\item[\tiny$\blacksquare$] 
+The first task in this line of research will be to find out under which conditions an imprecise continuous-time Markov chain converges to a limit distribution {\bf (Work Package 3a)}. In cases where such a limit distribution exists, we will also characterise the conditions under which it depends on the initial state of the chain and the conditions under which it is stationary. In discrete time, such a study has already been conducted successfully~\cite{hermans2012,cooman2008}. In continuous time however, we are only aware of some partial answers \cite{DeBock:2016:iCTMClimit}. 
 
 \item[\tiny$\blacksquare$]
-{\bf (Work Package 3b)}: can we compute the limit distribution directly? or indirectly but reasonably efficient?
-
-Find direct methods to calculate long term distributions for uniquely convergent chains. 
+Once we have established the existence of a limit distribution, the next task will be to develop methods that allow us to compute it~{\bf (Work Package 3b)}. In the precise case, this is relatively easy, as it only requires solving a linear system of equations. Unfortunately, in the imprecise case, this system becomes non-linear, and solving it is therefore far more difficult. We envision two approaches. The first option is to try and solve this system directly. We expect this option to be feasible only in special cases. Whenever it is not, we will resort to the second option, which is to compute the limit distribution in a more naive way, that is, to actually approach the limit up to some desired accuracy. Since this second option will clearly benefit from the results that are obtained in Work Packages 2b and 2c, we intend for the respective researchers to collaborate on these topics.
 
 
-Our first task will be to find robust methods for the analysis of convergence and finding the limit distributions. 
-As it seems very unlikely that this would be possible to be done analytically, we will rely on some kinds of numerical methods, which even in the case of a very optimistic scenario will most likely be computationally intensive.
 \item[\tiny$\blacksquare$]
-{\bf (Work Package 3c)}: Classification of the states and stationary distributions
-%The second task is 
-
-Within {\bf (Work Package 3c)} we will analyse the structure of the stationary and limit distributions. The nature of imprecise models allows a richer range of classes of states and transitions between them than in the precise case. We will investigate the induced accessibility relations and their influence on convergence, especially when it is not unique. We will also characterize and classify the invariant distributions. For the starting point we will extend the methodology from \cite{skulj:13b}, where a partial classification of invariant sets for the discrete time imprecise Markov chains was proposed, to the continuous time models. 
+The last task in this research line will be to analyse the structure of limit distributions, that is, the types of classes to which the states belong {\bf (Work Package 3c)}. We expect this to be challenging because, due to their generality, imprecise continuous-time Markov chains will allow for a far richer range of classes of states and transitions between them than in the precise case. Our aim is to investigate the induced accessibility relations and their influence on convergence, especially when it is not unique, and to characterize and classify the invariant distributions. As a first step, we will extend the methodology in Reference~\cite{skulj:13b}---where a partial classification of invariant sets for discrete-time imprecise Markov chains was proposed---to the continuous-time case. 
 
 \vspace{8pt}
 \end{itemize}
