@@ -768,9 +768,8 @@ Time reversal is an important concept in the theory of stochastic processes and 
 \vspace{3pt}
 
 As ought to be clear from the discussion above, the proposed research does not work towards a specific application, nor does it try to build an ad-hoc model for some specific problem.
-Instead, the aim is to begin building a general framework for robust continuous-time Markov chains.
-Nevertheless, if we succeed in doing so, then of course, this framework can be used to study and solve a variety of problems, in interesting areas of application, such as for instance bio-informatics or queueing {\bf(Work Package 5)}. 
-The choice of applications will of course depend on the level of complexity that the developed framework will by then be able to deal with.
+Instead, the aim is to develop a general theory of continuous-time Markov chains.
+Nevertheless, if we succeed in doing so, then of course, our results can be used to study and solve a variety of practical problems. Since real applications are an ideal testing ground for new theoretical results, we would---if time permits---like to tackle such applications ourselves; the choice of applications will depend on the level of complexity that the developed framework will by then be able to deal with.
 
 
 % ## Addedd by Damjan
@@ -826,9 +825,8 @@ You might use a table or another type of scheme to clarify the work plan. Clearl
 
 {\bf\color{blue} (WE WAIT WITH THIS PART FOR NOW...)}
 
-*** make a detailed timeline, to indicate which project partner will focuss on what, and on which (sub)topics the different partners will collaborate and/or share expertise. ***
 
-At Ghent University, a PhD fellowship, and therefore also the work on the proposed research, is usually spread over a period of four years.
+At the universities of Ghent and Ljubljana, a PhD fellowship, and therefore also the work on the proposed research, is usually spread over a period of four years.
 We have indicated these four years in the table below, and have divided every year into four periods of three months (i.e.~quarters).
 The work on the proposed research has already been divided in work packages in the previous section.
 For each work package, the table provides a short description and indicates the quarters during which we expect the student to be working on it.
@@ -841,58 +839,67 @@ Of course, a good deal of the time in the last two quarters of year four will al
 \begin{center}
 \resizebox{.95\textwidth}{!}{%
 \begin{tabular}{r|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
-& \textbf{Short description} & \multicolumn{4}{c|}{\textbf{\nth{1} year}}   & \multicolumn{4}{c|}{\textbf{\nth{2} year}} & \multicolumn{4}{c|}{\textbf{\nth{3} year}} & \multicolumn{4}{c}{\textbf{\nth{4} year}} 
-\\\hline
-\textbf{WP1} & Study the relevant literature  
+& \emph{Short description} & \multicolumn{4}{c|}{\textbf{\nth{1} year}}   & \multicolumn{4}{c|}{\textbf{\nth{2} year}} & \multicolumn{4}{c|}{\textbf{\nth{3} year}} & \multicolumn{4}{c}{\textbf{\nth{4} year}} 
+\\ 
+\hline
+%\textbf{RL1} 
+& \textbf{Joint models and properties}
+&   \multicolumn{16}{c}{}     
+\\ \hline
+\textbf{WP1a} & Probability tree model  
 & x & x & o & o & o & o &   &   &   &   &   &   &   &   &   &    
 \\ \hline
-\textbf{WP2} & Fix the probability tree model          
+\textbf{WP1b} & Expression for the joint          
 &   & o & x & x & o & o &   &   &   &   &   &   &   &   &   &    
 \\ \hline
-\textbf{WP3} & Study its mathematical aspects         
+\textbf{WP1c} & Mathematical properties         
 &   &   &   & o & x & x & x & o & o &   &   &   &   &   &   &    
 \\ \hline
-\textbf{WP4} & Develop inference methods  
+%\textbf{RL2} 
+& \textbf{Computational methods}
+&   \multicolumn{16}{c}{}     
+\\ \hline
+\textbf{WP2a} & Coefficients of ergodicity 
 &   &   &   &   &   &   & o & x & x & x & x & o & o & o &   &    
 \\ \hline
-\textbf{WP5} & Develop efficient algorithms             
+\textbf{WP2b} & Compute thight bounds             
 &   &   &   &   &   &   &   &   &   & o & x & x & x & o & o & o 
 \\ \hline
-\textbf{WP6} & Apply to real-world problems     
+\textbf{WP2c} & Error estimation    
 &   &   &   &   &   &   &   &   &   &   & o & o & x & x & x & o
+\\ \hline
+\textbf{WP2d} & Perturbation analysis     
+&   &   &   &   &   &   &   &   &   &   & o & o & x & x & x & o
+\\ 
+\hline
+%\textbf{RL3} 
+& \textbf{Limit behaviour}
+&   \multicolumn{16}{c}{}     
+\\ \hline
+\textbf{WP3a} & Existence of limit distributions
+& x & x & o & o & o & o &   &   &   &   &   &   &   &   &   &    
+\\ \hline
+\textbf{WP3b} & Compute limit distributions      
+&   & o & x & x & o & o &   &   &   &   &   &   &   &   &   &    
+\\ \hline
+\textbf{WP3c} & Characterise limit distributions   
+&   &   &   & o & x & x & x & o & o &   &   &   &   &   &   &  
+\\ \hline 
+& \textbf{Contingency plans}
+&   \multicolumn{16}{c}{}     
+\\ \hline
+\textbf{WP4} & Time reversal 
+&   &   &   &   &   &   & o & x & x & x & x & o & o & o &   &    
+\\ \hline
+\textbf{WP5} & Applications         
+&   &   &   &   &   &   &   &   &   & o & x & x & x & o & o & o  
 \end{tabular}}
+\vspace{13pt}
 \end{center}
 % As explained in our methodology, the work on (WP2) is initiated after the work on (WP3) because it relies on some of its results. Furthermore, as also explained before, (WP6) is currently not at the core of the proposed research, but can serve as a contingency plan if necessary.
-\vspace{6pt}
 
-{\color{Gray}
-*** this is a part of the text of some previous proposal, which could serve as an example of the type of text we are looking for here ***
 
-\begin{table}[H]
-    \caption{Summary and time line of work packages}
-    \label{tab:timing}
-    \centering
-    \resizebox{\textwidth}{!}{%
-        \begin{tabular}{r | l | c|c|c|c | c|c|c|c | c|c|c|c | c|c|c|c}
-           & \textbf{Short description} & \multicolumn{4}{c|}{\textbf{\nth{1} year}}   & \multicolumn{4}{c|}{\textbf{\nth{2} year}} & \multicolumn{4}{c|}{\textbf{\nth{3} year}} & \multicolumn{4}{c}{\textbf{\nth{4} year}} \\ \hline
-           \textbf{WP1} & Develop imprecise CT input processes    & x & x & x & x & o & o &   &   &   &   &   &   &   &   &   &    \\ \hline
-           \textbf{WP2} & Develop robust CT queueing models          &   &   &   & o  &  x & x & x  & x  & x & x & o & o  &  o &   &   &    \\ \hline
-           \textbf{WP3} & Develop imprecise CT Markov chains         &   &   & x & x & x & x & x & o & o &   &   &   &   &   &   &    \\ \hline
-           \textbf{WP4} & Design efficient algorithms  &   &   &   &   &   &   & o  & x & x & x & x & x & o & o &   &    \\ \hline
-           \textbf{WP5} & Apply our framework to real problems             &   &   &   &   &   &   &   &   &   &   & o & o & x & x & x & x \\ \hline
-           \textbf{WP6} & Learn imprecise CT models from data     &   &   &   &   &   &   &   &   & o & o & o & x & o & o & o & o
-        \end{tabular}
-    }
-\end{table}
-
-A Ph.D.\ fellowship, and therefore also the work on the proposed research, is spread over a period of four years.
-I have indicated these four years in Table~\ref{tab:timing}, and have divided every year in four periods of three months (i.e. quarters).
-The work of the proposed research was already divided in work packages in the previous section.
-For each work package, Table~\ref{tab:timing} provides a short description (CT stands for `continuous-time') and indicates the quarters during which I expect to be working on it.
-I tick the box of a quarter with an x to indicate almost certainties; these are the quarters during which I expect to definitely spend time on the indicated work package.
-I use o's to tick boxes of which I am not yet certain that I will need and/or use them.
-These o-quarters are used to absorb setbacks or to allow for some flexibility, and indicate the maximum amount of time that I intend to spend on a given work package. As explained in our methodology, the work on (WP2) is initiated after the work on (WP3) because it relies on some of its results. Furthermore, as also explained before, (WP6) is currently not at the core of the proposed research, but can serve as a contingency plan if necessary.
-}
+As explained in our methodology, the work on (WP2) is initiated after the work on (WP3) because it relies on some of its results. Furthermore, as also explained before, (WP6) is currently not at the core of the proposed research, but can serve as a contingency plan if necessary.
 
 % Alternative:
 % \begin{table}[H]
