@@ -456,7 +456,7 @@ Rather remarkably, the current state of the art in the theory is able to perform
 
 \vspace{5pt}
 \emph{A brief introduction to imprecise discrete-time Markov chains}\\[5pt]
-Applying the results and ideas developed in the field of imprecise probabilities has in particular led to interesting advances in \emph{discrete-time} finite-state Markov chains, resulting in a theory of so-called \emph{imprecise Markov chains} \cite{cooman2008,hermans2012,hartfiel1998,skulj2013,cooman2015:isipta:markov,cooman2015:markovergodic}.
+Applying the results and ideas developed in the field of imprecise probabilities has in particular led to interesting advances in \emph{discrete-time} finite-state Markov chains, resulting in a theory of so-called \emph{imprecise Markov chains} \cite{cooman2008,hermans2012,hartfiel1998,skulj2013,cooman2015:markovergodic}.
 They correspond to a collection of stochastic processes that need not satisfy the Markov property.
 They are only `superficially Markov', in the sense that their \emph{sets} of transition probabilities satisfy a Markov condition, whereas the individual members of those sets need not.
 In other words, imprecise Markov chains are \emph{not} simply collections of precise Markov chains, but rather correspond to collections of general stochastic processes whose transition models belong to sets that satisfy a Markov condition.
@@ -468,7 +468,7 @@ A crucial step that made these developments possible was the observation that ge
 These paths correspond to the elements of the sample space in the more conventional measure-theoretic approach.
 With such a tree there is associated a convex closed set of so-called martingales---all real processes with zero expected increase from one time step to the next---and a very important result by Ville \cite{ville1939,shafer2001} shows that all probabilistic properties of, and inferences about, the stochastic process are completely determined by this set of martingales.
 
-Once we recognise this, going to imprecise stochastic processes becomes fairly straightforward, at least conceptually: the local models attached to the tree's nodes are now sets of probabilities, and all probabilistic inferences can be shown, through an appropriate extension of Ville's Theorem, to be completely characterised by the corresponding convex closed set of \emph{sub}martingales (real processes with non-negative expected increase under all precise probability models in these sets) \cite{cooman2007d,cooman2015:markovergodic,cooman2015:isipta:markov}.
+Once we recognise this, going to imprecise stochastic processes becomes fairly straightforward, at least conceptually: the local models attached to the tree's nodes are now sets of probabilities, and all probabilistic inferences can be shown, through an appropriate extension of Ville's Theorem, to be completely characterised by the corresponding convex closed set of \emph{sub}martingales (real processes with non-negative expected increase under all precise probability models in these sets) \cite{cooman2007d,cooman2015:markovergodic}.
 
 *** some text to create a link with the next subsection ***
 
@@ -476,7 +476,7 @@ Once we recognise this, going to imprecise stochastic processes becomes fairly s
 
 *** Discuss all the different things that have already been successfully studied in some detail (especially the things that we intend to generalize to continuous time in this project) ***
 
-In its initial phase there have been several approaches proposed to the theory of Markov chains with imprecise (or uncertain parameters). They have been first analysed by Hartfiel~\cite{hart:98} under the name Markov set chains, where the focus was on the models where lower and upper probabilities are specified for the transition probabilities between individual states, and partially also to the models with general (not-necessarily) convex sets of transition operators. Concepts such as importance convexity of sets of distributions over states, separately specified rows and coefficients of ergodicity have already been recognized by Hartfiel. Apparently unaware of Hartfiel's work Kozine and Utkin~\cite{utkin:02} have proposed an approach that was formally linked with the theory of interval probabilities, however they applied a different interpretation. That is, instead of allowing variable transition probability operators, that are assumed in most of the other models, they assumed a precise but unknown model. This resulted in substantially different models. 
+In its initial phase there have been several approaches proposed to the theory of Markov chains with imprecise (or uncertain parameters). They have been first analysed by Hartfiel~\cite{hartfiel1998} under the name Markov set chains, where the focus was on the models where lower and upper probabilities are specified for the transition probabilities between individual states, and partially also to the models with general (not-necessarily) convex sets of transition operators. Concepts such as importance convexity of sets of distributions over states, separately specified rows and coefficients of ergodicity have already been recognized by Hartfiel. Apparently unaware of Hartfiel's work Kozine and Utkin~\cite{utkin:02} have proposed an approach that was formally linked with the theory of interval probabilities, however they applied a different interpretation. That is, instead of allowing variable transition probability operators, that are assumed in most of the other models, they assumed a precise but unknown model. This resulted in substantially different models. 
 
 A formal connection between Markov chains and the models of imprecise probabilities stared with the work of de Cooman et. al~\cite{cooman2008} where rigorous mathematical framework for the theory of Markov chains was proposed based on the theory of coherent upper previsions. Mostly independently, similar ideas have been applied by Škulj~\cite{skulj:09}, where the focus is more on the models of interval probabilities and general convex sets of probabilities. Both approaches focus on basic mechanisms of calculating distributions of Markov chains whose uncertainty in parameters is modelled via imprecise probabilities and proving convergence. Concerning the calculation of distributions, the main difference is that in \cite{cooman2008} the backwards induction approach is used instead of forward calculations done with sets of distributions used in \cite{skulj:09} and in most of the earlier approaches. 
 
@@ -486,7 +486,7 @@ Concepts of generalised transition operators and ideas used in the analysis of t
 ** Here, a relation to the general theory of imprecise random processes can be mentioned. 
 ** DS: I wrote most about my work and as much as I knew about yours, so you should look and add additional information where needed. 
 
-In particular, limit behaviour of imprecise Markov chains has been studied extensively. Unique convergence has been studied in \cite{cooman2008, cooman2010} via accessibility relations based on upper transition probabilities, resulting in necessary and sufficient conditions for unique convergence based on the structure of transition operators.
+In particular, limit behaviour of imprecise Markov chains has been studied extensively. Unique convergence has been studied in \cite{cooman2008,hermans2012} via accessibility relations based on upper transition probabilities, resulting in necessary and sufficient conditions for unique convergence based on the structure of transition operators.
 In \cite{skulj2013} the study of unique convergence has been made using the approach with coefficients of ergodicity, that additionally to providing conditions for convergence also measure its rate. Along the way to finding an imprecise version of coefficients of ergodicity, also metric properties of imprecise operators have been studied. A notable result is a connection made between the Hausdorff metric between convex sets of probability measures and the distance between the corresponding expectation operators. 
 
 When convergence is not unique, imprecise Markov chains behave substantially different than the precise models. In particular the analysis of the accessibility between states becomes much more complicated, and so does the analysis of the structure of invariant distributions. These problems were studied in \cite{skulj:13b}, providing a general classification of the invariant distributions of imprecise Markov chains and convergence for the case where the invariant distributions are not unique. Another type of convergence is the so-called conditional convergence for Markov chains with absorbing states and certain absorption. Although in the long term the chain will be absorbed in the absorbing state, under some regularity assumptions a long term conditional distribution with respect to the event that the chain has not yet been absorbed converges uniquely to a conditional stationary distribution. In the settings of imprecise Markov chains the problem was studied by Crossman and Škulj in \cite{Crossman:2010}, where the existence of a unique conditional distribution has been proved under an assumption of regularity. 
@@ -517,6 +517,8 @@ We are only aware of a recent initial analysis by \v{S}kulj \cite{skulj2015:cont
 
 Imprecise probability theory has advanced almost unanimously for discrete-time stochastic processes.
 Imprecise continuous-time models have been explored only very recently \cite{skulj2015:continuous:bounds,Troffaes+GSB-ISIPTA15p}, and many basic theoretical and computational problems have yet to be solved.
+
+Initial study of limit behaviour: \cite{DeBock:2016:iCTMClimit}
 }
 
 \vspace{3mm}
@@ -552,7 +554,7 @@ The proposed research is unconventional from the perspective of both domains tha
 First of all, from the point of view of Markov chain theory, our approach is unconventional because it breaks with two traditional assumptions: the Markov condition is replaced by a weaker version, and the probabilities that make up the model do not have to be specified exactly. Secondly, from an imprecise probability perspective, this project is unconventional because time is taken to be continuous, whereas past research on imprecise stochastic processes has focussed almost unanimously on discrete-time problems.
 
 Due to this unconventional nature of the proposed research, and because the topic is largely unexplored, this project will clearly be challenging. 
-However, given the extensive experience of both partners in studying various aspects of imprecise \emph{discrete-time} stochastic processes~\cite{cooman2007d,cooman2008,hermans2012,cooman2015:markovergodic,cooman2015:isipta:markov}, we are convinced that we have the necessary background to successfully tackle similar research problems in continuous time.
+However, given the extensive experience of both partners in studying various aspects of imprecise \emph{discrete-time} stochastic processes~\cite{cooman2007d,cooman2008,hermans2012,cooman2015:markovergodic}, we are convinced that we have the necessary background to successfully tackle similar research problems in continuous time.
 
 
 \vspace{7pt}
@@ -563,9 +565,7 @@ Describe the different envisaged steps in your research, including intermediate 
 Show where the proposed methodology is according to the state of the art and where it is novel.
 Enclose risks that might endanger reaching project objectives and the contingency plans to be put in place should risk occur.}
 
-*** MORE REFERENCES NEED TO BE ADDED IN THIS SECTION ***
-
-As explained in the objectives section, we intend to pursue three lines of research, each of which has been very successful for precise continuous-time Markov chains, but none of which has so far made significant progress in the imprecise case; a detailed plan for all of them is outlined below. Each of these three lines of research will initially be carried out by a separate full time PhD student, under the close supervision of the (co-)supervisors and a part-time senior researcher. As time and research progresses, we expect these lines of research to mutually benefit from each other, leading to intensive collaborations between the respective students and their supervisors. Concrete topics of collaboration are discussed within the following detailed plans.
+As explained in the objectives section, we intend to pursue three lines of research, each of which has been very successful for precise continuous-time Markov chains, but none of which has so far made significant progress in the imprecise case; a detailed plan for all of them is outlined below. Each of these three lines of research will initially be carried out by a separate full time PhD student, under the close supervision of the (co-)supervisors and a part-time senior researcher. As time and research progresses, we expect these lines of research to mutually benefit from each other, leading to intensive collaborations between the respective students and their supervisors. Concrete topics for collaboration are discussed within the following detailed plans.
 
 
 
@@ -598,7 +598,7 @@ As a first important special case, we intend to check whether the model allows f
 The fact that something similar is possible---and fairly straightforward---in the discrete-time case \cite{cooman2008}, should serve as an indication that this is indeed feasible. A second important special case will be to define stopping times, and to study their basic properties.\vspace{8pt}
 \end{itemize}
 
-Since the Chapman-Kolmogorov equations and stopping times lie at the basis of many computational methods for (precise) continuous-time Markov chains, we expect Work Package~1c to yield results that are useful to advance the second---computational---line of research that we are about to introduce (especially Work Package~2b). In order to take advantage of this overlap, we will provide the respective PhD students with the opportunity to collaborate on these topics.
+Since the Chapman-Kolmogorov equations and stopping times lie at the basis of many computational methods for (precise) continuous-time Markov chains, we expect Work Package~1c to yield results that are useful to advance the second---computational---line of research that we are about to introduce (especially Work Package~2b). In order to take advantage of this overlap, we will provide the respective researchers with the opportunity to collaborate on these topics.
 
 
 \vspace{8pt}
@@ -627,7 +627,7 @@ The second general goal of this project is therefore to develop and improve nume
 \vspace{6pt}
 \begin{itemize}
 \item[\tiny$\blacksquare$]
-The first step in this line of research will be to define and compute coefficients of ergodicity (and possibly also other measures of contraction) for imprecise continuous-time Markov chains {\bf(Work Package 2a)}. By analogy with the discrete-time case, we expect that it will not be possible to evaluate the theoretical definitions directly, but that indirect computational methods will have to be developed. In order to do that, we will need to be able to efficiently compute distances between coherent lower or upper previsions that are only partially specified. Known numerical examples suggest that this problem is challenging but solvable. %To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems. 
+The first step in this line of research will be to define and compute coefficients of ergodicity (and possibly also other measures of contraction) for imprecise continuous-time Markov chains {\bf(Work Package 2a)}. By analogy with the discrete-time case~\cite{skulj2013}, we expect that it will be difficult to evaluate the theoretical definitions directly, and that indirect computational methods will have to be developed. In order to do that, we will need to be able to efficiently compute distances between coherent lower or upper previsions that are only partially specified. Known numerical examples suggest that this problem is challenging but solvable. %To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems. 
 \item[\tiny$\blacksquare$]  
 The next task {\bf(Work Package 2b)} is to develop methods for calculating tight bounds on expected values of functions of the states of an imprecise Markov chain. At first, we intend to extend existing methods for functions that depend on the state at a single time point in the future~\cite{skulj2015:continuous:bounds}, which fail when the time interval grows large. In order to overcome this difficulty, we intend to exploit the contracting nature of Markov transition operators, using the coefficients of ergodicity of Work Package 2a. Later on, we will also try and compute expectations of more general functions, including important stopping times---such as the expected time to absorption and expected return times---and probabilities of general events---such as absorption probabilities.
 
@@ -686,36 +686,29 @@ Such a perturbation analysis has previously been successfully applied to impreci
 % 
 % The above results are needed if we want to calculate coefficients of ergodicity for $\overline T^n$ or $T_t$ in continuous time. 
 %
-% An indispensable tool for evaluating convergence in terms of how close are the results to the true values is the metric structure of the imprecise probability models. In this area a big gap exists between the theory and practice. We will reduce this gap by providing efficient methods for calculating the distances between imprecise probability models. The models of imprecise probabilities are usually evaluated as solutions of linear programming problems or, especially in the theory of imprecise Markov chains as sequences of several linear programming problems. Therefore a lot of computational effort is needed to obtain values of parameters, and consequently there is usually only a limited numbers of parameters at disposal. We will therefore look for the methods that will enable estimating the distances between imprecise probability models based on their partial identification. To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems. 
+% An indispensable tool for evaluating convergence in terms of how close are the results to the true values is the metric structure of the imprecise probability models. In this area a big gap exists between the theory and practice. We will reduce this gap by providing efficient methods for calculating the distances between imprecise probability models. The models of imprecise probabilities are usually evaluated as solutions of linear programming problems or, especially in the theory of imprecise Markov chains as sequences of several linear programming problems. Therefore a lot of computational effort is needed to obtain values of parameters, and consequently there is usually only a limited numbers of parameters at disposal. We will therefore look for the methods that will enable estimating the distances between imprecise probability models based on their partial identification. To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems.
 
-*** Discuss overlap with previous and next line of research ***
+As we discussed earlier, this computation-oriented line of research will benefit from the theoretical results in Research Line 1, and the respective researchers will be expected to collaborate. Similarly, the computational methods that we develop here (Work Package 2b and 2c in particular) will be beneficial to the study of limit distributions that we intend to conduct in the context of Research Line 3 (Work Package 3b in particular), because the latter will involve computing these limit distributions numerically; here too, the respective researchers will be expected to collaborate.
 
 \vspace{8pt}
 \emph{Limit behaviour and stationary distributions} {\bf (Research Line 3)}.
 %\emph{Limit behaviour} {\bf (Research Line 3)}.
 \vspace{3pt}
 
-Limit behaviour is one of the most crucial topics in the theory of Markov chains, and if a unique stationary distribution exists, then it is often the central object of interest. In the precise case, linear algebra provides powerful tools for the analysis of limit behaviour, and in many cases, the stationary distribution can be computed directly, by solving a system of equations. Unfortunately, this is no longer true for imprecise Markov chains. For imprecise discrete-time Markov chains, alternative methods have been developed *** REFS ***, but in continuous time, only very little is known so far *** REFS ***. Therefore, the third main goal of this project is to study and characterize the limit behaviour of imprecise continuous-time Markov chains. This line of research can be divided into the following three work packages.
+Limit behaviour is one of the most crucial topics in the theory of Markov chains, and if a unique stationary distribution exists, then it is often the central object of interest. In the precise case, linear algebra provides powerful tools for the analysis of limit behaviour, but unfortunately, no such methods are available for imprecise Markov chains. For imprecise discrete-time Markov chains, alternative methods have been developed~\cite{cooman2008}, but in continuous time, only very little is known so far. Therefore, the third main goal of this project is to study and characterize the limit behaviour of imprecise continuous-time Markov chains. This line of research can be divided into the following three work packages.
 
 
 \vspace{6pt}
 \begin{itemize}
-\item[\tiny$\blacksquare$]
-The first task in this line of research will be to find out under which conditions an imprecise continuous-time Markov chain converges to a limit distribution {\bf (Work Package 3a)}. In cases where such a limit distribution exists, we will also characterise the conditions under which it depends on the initial state of the chain and the conditions under which it is stationary. In discrete time, such a study has already been conducted successfully *** REFS ***. In continuous time however, we are only aware of some partial answers *** REFS ***. 
+\item[\tiny$\blacksquare$] 
+The first task in this line of research will be to find out under which conditions an imprecise continuous-time Markov chain converges to a limit distribution {\bf (Work Package 3a)}. In cases where such a limit distribution exists, we will also characterise the conditions under which it depends on the initial state of the chain and the conditions under which it is stationary. In discrete time, such a study has already been conducted successfully~\cite{hermans2012,cooman2008}. In continuous time however, we are only aware of some partial answers \cite{DeBock:2016:iCTMClimit}. 
 
 \item[\tiny$\blacksquare$]
-{\bf (Work Package 3b)}: can we compute the limit distribution directly? or indirectly but reasonably efficient?
-
-Find direct methods to calculate long term distributions for uniquely convergent chains. 
+Once we have established the existence of a limit distribution, the next task will be to develop methods that allow us to compute it~{\bf (Work Package 3b)}. In the precise case, this is relatively easy, as it only requires solving a linear system of equations. Unfortunately, in the imprecise case, this system becomes non-linear, and solving it is therefore far more difficult. We envision two approaches. The first option is to try and solve this system directly. We expect this option to be feasible only in special cases. Whenever it is not, we will resort to the second option, which is to compute the limit distribution in a more naive way, that is, to actually approach the limit up to some desired accuracy. Since this second option will clearly benefit from the results that are obtained in Work Packages 2b and 2c, we intend for the respective researchers to collaborate on these topics.
 
 
-Our first task will be to find robust methods for the analysis of convergence and finding the limit distributions. 
-As it seems very unlikely that this would be possible to be done analytically, we will rely on some kinds of numerical methods, which even in the case of a very optimistic scenario will most likely be computationally intensive.
 \item[\tiny$\blacksquare$]
-{\bf (Work Package 3c)}: Classification of the states and stationary distributions
-%The second task is 
-
-Within {\bf (Work Package 3c)} we will analyse the structure of the stationary and limit distributions. The nature of imprecise models allows a richer range of classes of states and transitions between them than in the precise case. We will investigate the induced accessibility relations and their influence on convergence, especially when it is not unique. We will also characterize and classify the invariant distributions. For the starting point we will extend the methodology from \cite{skulj:13b}, where a partial classification of invariant sets for the discrete time imprecise Markov chains was proposed, to the continuous time models. 
+The last task in this research line will be to analyse the structure of limit distributions, that is, the types of classes to which the states belong {\bf (Work Package 3c)}. We expect this to be challenging because, due to their generality, imprecise continuous-time Markov chains will allow for a far richer range of classes of states and transitions between them than in the precise case. Our aim is to investigate the induced accessibility relations and their influence on convergence, especially when it is not unique, and to characterize and classify the invariant distributions. As a first step, we will extend the methodology in Reference~\cite{skulj:13b}---where a partial classification of invariant sets for discrete-time imprecise Markov chains was proposed---to the continuous-time case. 
 
 \vspace{8pt}
 \end{itemize}
@@ -724,21 +717,16 @@ Within {\bf (Work Package 3c)} we will analyse the structure of the stationary a
 \emph{Contingency plans} {\bf (Work Packages 4 \& 5)} 
 \vspace{3pt}
 
-*** Unforseen circumstances, risks and contingency plans ***
-
-Although we expect to finish each of the work packages that we have just discussed, it might of course happen that we run into some problems. For example, some computations might be inherently intractable, or there might be some theoretical questions that we are unable to solve. However, even if we were to come across such problems, this will not endanger the global aim of this project, which is to make significant progress in the development of the theory of continuous-time Markov chains. Indeed, ...
-
+Although we expect to finish each of the work packages that we have just discussed, it might of course happen that we run into some problems. For example, some computations might be inherently intractable, or there might be some theoretical questions that we are unable to solve. However, even if we were to come across such problems, this will not endanger the global aim of this project, which is to make significant progress in the development of the theory of continuous-time Markov chains. Indeed, since the field of imprecise continuous-time Markov chains is essentially wide-open, and because both of the partners in this project are word-leading authorities on the discrete time version, it should not be a problem to make significant progress in each of the three lines of research that we have just discussed.
+Nevertheless, in case we do need to absorb some major setbacks,  the following two additional research topics can serve as contingency plans. They also serve as extra topics in case the intended research progress quicker then expected.
 
 
-At this point, we envision that this last topic will only be marginally treated in the project. However, if necessary, it does provide us with a contingency plan that is of independent interest.
+First, as ought to be clear from the detailed information above, the proposed research does not work towards a specific application, nor does it try to build an ad-hoc model for some specific problem.
+Instead, the aim is to develop a general theory of continuous-time Markov chains.
+Nevertheless, if we succeed in doing so, then of course, our results can be used to study and solve a variety of practical problems. Therefore, an since real applications are an ideal testing ground for new theoretical results, it would be nice to tackle such applications ourselves {\bf (Work Package 5)}; the choice of applications will depend on the level of complexity that the developed framework will by then be able to deal with.
 
-
-and that we additionally consider time reversibility and applications, as optional topics that stretch over (and require) all three lines of research, which serve as backup plans and/or extra toppics if time permits.
-
-%\vspace{5pt}
-\emph{Time reversibility} {\bf (Work Package 4)} 
-%\vspace{3pt}
-Time reversal is an important concept in the theory of stochastic processes and has not yet been systematically studied under the framework of imprecision, with the exception of \cite{skulj:16}. A systematic analysis of time reversed processes and reversible Markov chains will therefore be conducted. The first task is a formal approach to time reversal for processed based on imprecise probabilities. This is a theoretically challenging task, since the concept applies techniques, such as conditioning and Bayes rule, whose applications to imprecise probability models substantially differ from their use in the classical models. We will examine the possibilities to model time reversal in terms of the models of imprecise probabilities and establish the relation between continuous random walks on weighted graphs, extending the methodology used in  \cite{skulj:16} for the discrete time case. A special emphasis will be on the computational issues. 
+A second potential extra research topic is time reversibility.
+This concept is very important in the theory of (precise) stochastic processes, but it has not yet been systematically studied under the framework of imprecision; to the best of our knowledge, the preliminary---and so far unpublished---results in Reference~\cite{skulj:16} are the only exception. Therefore, a systematic analysis of imprecise continuous-time reversible Markov chains {\bf (Work Package 4)} would definitely be an interesting research topic to pursue. %The first task is a formal approach to time reversal for processed based on imprecise probabilities. This is a theoretically challenging task, since the concept applies techniques, such as conditioning and Bayes rule, whose applications to imprecise probability models substantially differ from their use in the classical models. We will examine the possibilities to model time reversal in terms of the models of imprecise probabilities and establish the relation between continuous random walks on weighted graphs, extending the methodology used in  \cite{skulj:16} for the discrete time case. A special emphasis will be on the computational issues. 
 
 
 %The work will be divided into the following ??? work packages.
@@ -758,18 +746,8 @@ Time reversal is an important concept in the theory of stochastic processes and 
 %In particular, we will examine the continuous time version of the model of random walks on graphs.  
 %(tentative title, feel free to change)
 
-*** Theoretical framework for reversible imprecise Markov chains, including time reversal in general. Are time reversed imprecise Markov processes even still Markovian etc. ***
 
 
-
-
-\vspace{5pt}
-\emph{Applications} {\bf (Work Package 5)}.
-\vspace{3pt}
-
-As ought to be clear from the discussion above, the proposed research does not work towards a specific application, nor does it try to build an ad-hoc model for some specific problem.
-Instead, the aim is to develop a general theory of continuous-time Markov chains.
-Nevertheless, if we succeed in doing so, then of course, our results can be used to study and solve a variety of practical problems. Since real applications are an ideal testing ground for new theoretical results, we would---if time permits---like to tackle such applications ourselves; the choice of applications will depend on the level of complexity that the developed framework will by then be able to deal with.
 
 
 % ## Addedd by Damjan
@@ -837,7 +815,7 @@ Of course, a good deal of the time in the last two quarters of year four will al
 
 \vspace{10pt}
 \begin{center}
-\resizebox{.95\textwidth}{!}{%
+\resizebox{1\textwidth}{!}{%
 \begin{tabular}{r|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
 & \emph{Short description} & \multicolumn{4}{c|}{\textbf{\nth{1} year}}   & \multicolumn{4}{c|}{\textbf{\nth{2} year}} & \multicolumn{4}{c|}{\textbf{\nth{3} year}} & \multicolumn{4}{c}{\textbf{\nth{4} year}} 
 \\ 
