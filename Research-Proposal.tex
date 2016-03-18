@@ -1,5 +1,5 @@
+% -*- program: lualatex -*- 
 %!TEX program = lualatex
-
 \documentclass[11pt,dvipsnames,usenames,a4paper]{article}
 
 \usepackage[UKenglish]{babel}
@@ -56,18 +56,20 @@
 \textbf{Title of your research proposal} (\textcolor{Gray}{39/240 characters})\\
 Imprecise continuous-time Markov chains\\[8pt]
 \textbf{Dutch title} (\textcolor{Gray}{38/240 characters})\\
-Imprecieze continue-tijd Markov ketens\\[8pt]
+Imprecieze Markov-ketens in continue tijd\\[8pt]
 \textbf{Summary in layman's terms}\\
 \textcolor{Gray}{1469/1500 characters}\\
-Markov chains are among the most popular probabilistic models, and are very succesful at describing the uncertain evolution of various systems in time. Such a system can be in one of several states, and moves in between these states as time progresses. At what time and to which state it will move next is uncertain, and is therefore modelled by means of probabilities, which are assumed to only depend on the current state. 
+A Markov chain is a very popular probabilistic model, successful at describing the uncertain time evolution of various systems. 
+It can be in any one of several states, and moves between them as time progresses. 
+At each time and in each state, it is uncertain which state it will move to next, and this uncertainty is modelled using so-called transition probabilities, assumed to depend only on the current state. 
 
-When a Markov chain is set up, it is surprisingly convenient to make predictions about the future behaviour of such a process, and this makes it a popular tool in various applied domains, including engineering, artificial intelligence, mathematical finance and bio-informatics. However, in order to make these predictions reliable, perfect knowledge of the parameters of the Markov chain is required, and this is almost never possible. 
+It turns out to be quite convenient to make predictions about the future behaviour of a Markov chain, and this makes it a popular tool in various applied domains, including engineering, artificial intelligence, mathematical finance and bio-informatics. 
+But, to make these predictions reliable, perfect knowledge of the parameters---transition probabilities---of the Markov chain is required, and such knowledge is seldom available. 
 %Consequently, the longer the process evolves, the less reliable the predictions of a Markov chain typically are. 
-An efficient way of fixing this issue is to allow for partially specified parameters, using imprecise probabilities.
+An efficient way of dealing with this problem, is to allow for partially specified parameters, using the theory of imprecise probabilities.
 
-In the recent past, this idea has led to the successful development of so-called imprecise Markov chains in discrete time, and the universities of Ghent and Ljubljana have been on the forefront of this research. The aim of this project is to formalize this mutual interest, and to use our combined expertise to develop imprecise Markov chains in continuous time, thereby making it possible to apply imprecise Markov chains to real-life problems, the majority of which involve continuous time.
-
-
+In the recent past, this idea has led to the successful development of so-called imprecise Markov chains in discrete time, and the universities of Ghent and Ljubljana have been at the forefront of this research. 
+This project aims to formalise this mutual interest, and to use our combined expertise to develop a theory and toolbox for dealing with imprecise Markov chains in continuous time, making it possible to apply imprecise Markov chains in real-life problems, most of which involve continuous time.
 
 % Since the majority of past research on imprecise Markov chains was conducted at the universities of Ghent and Ljubljana, project aims to formalize this long-term mutual interest, and 
 
@@ -813,7 +815,7 @@ We use o's to tick boxes for which we are not yet certain that she will need and
 These o-quarters are used to absorb setbacks or to allow for some flexibility, and indicate the maximum amount of time that we intend the student to spend on a given work package.
 Of course, a good deal of the time in the last two quarters of year four will also be spent writing the PhD thesis, but we have not marked this in the table.
 
-\vspace{10pt}
+\vspace{7pt}
 \begin{center}
 \resizebox{1\textwidth}{!}{%
 \begin{tabular}{r|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
@@ -872,7 +874,7 @@ Of course, a good deal of the time in the last two quarters of year four will al
 \textbf{WP5} & Time reversal         
 &   &   &   &   &   &   &   &   &   & o & x & x & x & o & o & o  
 \end{tabular}}
-\vspace{13pt}
+\vspace{10pt}
 \end{center}
 % As explained in our methodology, the work on (WP2) is initiated after the work on (WP3) because it relies on some of its results. Furthermore, as also explained before, (WP6) is currently not at the core of the proposed research, but can serve as a contingency plan if necessary.
 
