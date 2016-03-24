@@ -1,0 +1,78 @@
+\documentclass[11pt,a4paper,roman]{moderncv}
+  %\moderncvtheme[roman,blue]{classic}
+  \moderncvstyle{casual}                             % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} 
+\usepackage{xcolor}
+\usepackage[official]{eurosym}
+%\usepackage[utf8]{inputenc}
+\usepackage[scale=0.75]{geometry}
+\setlength{\hintscolumnwidth}{2.6cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+
+% personal data
+\firstname{Jasper}
+\familyname{De Bock}
+\title{March 2016}  % optional, remove the line if not wanted
+
+% \mobile{+1-412-326-5765}  % optional, remove the line if not wanted
+%\phone{+1-412-268-9669} % optional, remove the line if not wanted
+%\fax{+1-412-268-1440}   % optional, remove the line if not wanted
+\email{Jasper.DeBock@UGent.be}  % optional, remove the line if not wanted
+\address{Ghent University}{Imprecise Probability unit of Data Science Lab}  % optional, remove the line if not wanted
+%\extrainfo{\href{http://users.ugent.be/~equaeghe}{users.ugent.be/$\sim$equaeghe}} % optional, remove the line if not wanted
+\photo[6\baselineskip]{JasperDeBock}  % optional, remove the line if not wanted
+% \quote{Some quote (optional)} % optional, remove the line if not wanted
+%\nopagenumbers{} % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\renewcommand*{\firstnamefont}{\fontsize{30}{32}\sffamily\mdseries\upshape}
+\renewcommand*{\cventry}[6]{%
+  \cvline{#1}{%
+    {\scshape#2}%
+    \ifx#3\else{, {\slshape#3}}\fi%
+    \ifx#4\else{, #4}\fi%
+    \ifx#5\else{, #5}\fi%
+    .%
+    \ifx#6\else{\newline{}\begin{minipage}[t]{\linewidth}\small#6\end{minipage}}\fi
+}}%
+\colorlet{titlecolor}{darkgray}
+\colorlet{addresscolor}{black!100}
+\colorlet{sectionrectanglecolor}{blue!10}
+\colorlet{sectiontitlecolor}{blue!100}
+\colorlet{subsectioncolor}{blue!80}
+
+
+\maketitle
+
+\vspace{-55pt}
+
+\section{Brief CV}
+\vspace{4pt}
+
+Jasper De Bock is a postdoctoral fellow of the Research Roundation -- Flanders (FWO), working at the imprecise probability unit of Data Science Lab, at the Faculty of Engineering and Architecture of Ghent university. Prior to this postdoctoral position, from October 2011 until September 2015, he was a PhD fellow of the FWO. He obtained his PhD in mathematical engineering at Ghent university in May 2015.
+
+\hspace{17pt}During the course of his PhD, Jasper De Bock has visited the Imprecise Probability Group (IPG) at IDSIA, Switzerland, for a period of two weeks and has visited the Department of Mathematical Sciences at Durham University, United Kingdom, for a period of two months. Recently, he obtained a \euro{}15000 FWO travel grant that will enable him to visit the IPG group again, now for a period of nine months. He also won the best student paper award at ECSQARU~2013 and the `ISIPTA-IJAR joung researcher award: Gold Prize' at ISIPTA 2015, and he published eight journal papers and eleven conference papers.
+
+\hspace{17pt}Other research achievements of Jasper De Bock are his service as a reviewer for two journals and five conferences, his at-large membership of the Executive Committee of SIPTA (the Society for Imprecise Probability) since July 2015, and the co-organisation of WPMSIIP 2014, an international workshop on statistical inference with interval probabilities.
+
+\hspace{17pt}As a teaching assistent and co-lecturer, Jasper De Bock has been involved in two courses (at bachelor and master level). He also gave two lectures at the 5th international SIPTA summer school, and has been involved in the supervision of one PhD thesis and four master theses.
+
+
+\vspace{2pt}
+\section{5 key peer reviewed publications}
+\vspace{5pt}
+\small
+\cvline{February 2016}{Jasper De Bock, Arthur Van Camp, M\'arcio A. Diniz \& Gert de Cooman. {\itshape Representation theorems for partially exchangeable random variables.} Fuzzy Sets and Systems, 284:1--30. [IF 2014: 1.986]}
+\cvline{December 2015}{Jasper De Bock \& Gert de Cooman. \textit{Conditioning, updating and lower probability zero.} International Journal of Approximate Reasoning, 67:1--36. [IF 2014: 2.451]}
+\cvline{January 2015}{Gert de Cooman, Jasper De Bock \& M\'arcio A. Diniz. {\itshape Coherent predictive inference under exchangeability with imprecise probabilities.} Journal of Artificial Intelligence Research, 52:1--95. [IF 2014: 1.257]}
+%\cvline{January 2015}{Jasper De Bock \& Gert de Cooman. {\itshape Extreme lower previsions.} Journal of Mathematical Analysis and Applications, 421(2):1042--1080. [Impact Factor 2014: 1.120]}
+\cvline{January 2015}{Jasper De Bock \& Gert de Cooman. {\itshape Credal networks under epistemic irrelevance: the sets of desirable gambles approach.} International Journal of Approximate Reasoning, 56(B):178--207. [IF 2014: 2.451] (invited paper)}
+\cvline{May 2014}{Jasper De Bock \& Gert de Cooman. {\itshape An efficient algorithm for estimating state sequences in imprecise hidden Markov models.} Journal of Artificial Intelligence Research, 50:189--233. [IF: 1.257]\vspace{5pt}}
+%\vspace{2pt}~
+
+
+\end{document}
