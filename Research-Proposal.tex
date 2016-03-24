@@ -45,7 +45,7 @@
 
 {\bf Date of the application} \tab\tab 1 April 2016 \\
 {\bf Official internal deadline Ghent university} \tab 15 March 2016 \\
-{\bf Unofficial internal deadline Ghent university} \tab {\bf\color{blue}24 March 2016} \\
+{\bf Unofficial internal deadline Ghent university} \tab 24 March 2016 \\
 
 %\vspace{2pt}
 
@@ -854,7 +854,7 @@ As a brief look at the mathematics of these stochastic models will already show,
 
 Interestingly, in recent decades much progress has been made in extending the existing corpus of general probabilistic knowledge to deal with both types of limitations: the field of \emph{imprecise probabilities} \cite{walley1991,augustin2013:itip,troffaes2013:lp} has, amongst other things, developed well-justified, mathematically rigorous, as well as robust and efficient methods for dealing with both of them.
 Stated in very simple terms, an imprecise probability model is a probabilistic model that is partially specified.
-For example, whenever it is infeasible to reliably estimate the probability of some event, the theory imprecise probabilities allows for the use of a probability interval instead.
+For example, whenever it is infeasible to reliably estimate the probability of some event, the theory of imprecise probabilities allows for the use of a probability interval instead.
 Such partial specifications do not lead to a unique probability measure, but instead give rise to a set of compatible probability measures.
 These sets of probability measures are called credal sets.
 They are the basic uncertainty models in imprecise probability theory. 
@@ -879,7 +879,7 @@ Hartfiel \cite{hartfiel1998}, using the name \emph{Markov set-chains}, focussed 
 Unaware of Hartfiel's work, Kozine and Utkin~\cite{utkin:02} proposed an approach with a different underlying interpretation, and very different computational aspects. 
 Instead of allowing transition probabilities to vary within given bounds from one time step (or state) to the next, they assumed a single precise but unknown Markov model: they worked with sets of precise Markov chains. 
 
-The first systematic anf fully rigorous approach to combining discrete-time Markov chains with imprecise probabilities is due to De Cooman et al.~\cite{cooman2008}, using the idea of lower conditional expectations---also called lower transition operators. 
+The first systematic and fully rigorous approach to combining discrete-time Markov chains with imprecise probabilities is due to De Cooman et al.~\cite{cooman2008}, using the idea of lower conditional expectations---also called lower transition operators. 
 Similar ideas were explored independently by Škulj~\cite{skulj:09}, who focussed instead on interval probability models and their associated convex sets of probability distributions. 
 For calculations and inferences, the main difference between the two approaches is that the lower transition operator approach in \cite{cooman2008} allows for very efficient backwards induction, in contrast with the much less efficient forward calculations typical in the sets of distributions approaches \cite{skulj:09}. 
 Lower transition operators, and the ideas used in the analysis of the limit behaviour of imprecise Markov chains, introduced in \cite{cooman2008}, became the basis for most of the later work on imprecise Markov chains. 
@@ -896,14 +896,14 @@ For imprecise Markov chains, Crossman and Škulj \cite{Crossman:2010} proved the
 More recent work has begun to address other practically useful properties of imprecise discrete-time Markov chains.
 Škulj \cite{skulj:2016b} uses coefficients of ergodicity to measure the sensitivity of imprecise Markov chains to perturbations in its parameters. 
 A systematic study of expected time to absorption, expected return times, stopping times, hitting  probabilities, and ergodicity was initiated in \cite{troffaes:2013, cooman2015:markovergodic}, but a complete theory is still under development. 
-Time reversal and reversible Markov chains they rely on specific properties of transition operators and stationary distributions that turn out to be quite hard to extend to their imprecise versions. 
+Time reversal and reversible Markov chains rely on specific properties of transition operators and stationary distributions that turn out to be quite hard to extend to their imprecise versions. 
 Although a complete description of reversible processes is not yet possible, a first successful attempt was made by Škulj~\cite{skulj:16}, by studying a special family of reversible imprecise Markov chains that are obtained as random walks on weighted graphs. 
 
 \emph{State of the art for continuous-time imprecise Markov chains}\\[5pt]
 The discussion above, as well as the bulk of the literature on imprecise Markov chains, deals mainly with their discrete-time variant: very little is known about how to deal with robustness and imprecision in continuous-time Markov chains. 
 Imprecise continuous-time Markov chains can be related---be it rather artificially---to continuous-time Markov decision processes and controlled Markov chains; these notions share the basic idea of multiple possible transition scenarios.
 Addressing them using the ideas and efficient techniques of imprecise probabilities has only been attempted very recently \cite{skulj2015:continuous:bounds,Troffaes+GSB-ISIPTA15p,DeBock:2016:iCTMClimit}.
-Many basic conceptual, theoretical and computational problems have yet to be solved, and the relationship with the continuous-time versions of imprecise probability trees and closed convex sets if submartingales has yet to be explored.
+Many basic conceptual, theoretical and computational problems have yet to be solved, and the relationship with the continuous-time versions of imprecise probability trees and closed convex sets of submartingales has yet to be explored.
 So far, Škulj \cite{skulj2015:continuous:bounds} has used ideas from the discrete-time approach to introduce imprecise versions of transition rate matrices and establish an appropriate counterpart for Kolmogorov's backward equation, leading to a non-linear differential state evolution equation. 
 He proved that it has maximal and minimal solutions that characterise all possible solutions. Finding these boundary solutions numerically is still very much a problem under study, but has huge potential for practical applications.
 
@@ -946,11 +946,11 @@ Show where the proposed methodology is according to the state of the art and whe
 Enclose risks that might endanger reaching project objectives and the contingency plans to be put in place should risk occur.}
 
 As explained in the objectives section, we intend to pursue three lines of research, each of which has been very successful for precise continuous-time Markov chains, but none of which has so far seen significant progress in the imprecise case; a detailed plan for each is outlined below. 
-Each research lines will initially be carried out by a dedicated full-time PhD student, under the close supervision of the (co-)supervisors and a part-time senior researcher. 
+Each research line will initially be carried out by a dedicated full-time PhD student, under the close supervision of the (co-)supervisors and a part-time senior researcher. 
 As time and research progresses, we expect these research lines to benefit from each other, leading to intensive collaborations between the respective students (and their supervisors). Concrete topics for collaboration are discussed within the following detailed plans.
 
 \emph{Joint models and basic properties} {\bf (Research Line 1)}.\\[3pt]
-A first important goal of this project is to develop a rigorous martingale-theoretic and measure-theoretic definitions for the joint models of a continuous-time imprecise Markov chains, and to use these models to generalise a number of basic theoretical properties of precise continuous-time Markov chains. 
+A first important goal of this project is to develop a rigorous martingale-theoretic and measure-theoretic definition for the joint models of a continuous-time imprecise Markov chains, and to use these models to generalise a number of basic theoretical properties of precise continuous-time Markov chains. 
 %This research will be conducted by a single student, under the close supervision of the IP unit of the Data Science Lab, and can be divided into the following six work packages.
 This research can be divided into the following three work packages.
 % \vspace{6pt}
@@ -1090,7 +1090,7 @@ Nevertheless, our results can be used to study and solve a variety of practical 
 Since real applications are an ideal testing ground for new theory, it would be nice to tackle such applications {\bf (Work Package 4)}; the choice of application will depend on the level of complexity that the developed framework will by then be able to deal with.
 
 A second extra research topic is time reversibility.
-This concept is very important for (precise) stochastic processes, but it has not yet been systematically studied in the framework of imprecision; to the best of our knowledge, the preliminary---and so far unpublished---results~\cite{skulj:16} are the only exception.
+This concept is very important for (precise) stochastic processes, but it has not yet been systematically studied in the framework of imprecision; to the best of our knowledge, the preliminary---and so far unpublished---results in Reference~\cite{skulj:16} are the only exception.
 Therefore, a systematic analysis of imprecise continuous-time reversible Markov chains {\bf (Work Package 5)} would definitely be an interesting research topic to pursue.
 %The first task is a formal approach to time reversal for processed based on imprecise probabilities
 % This is a theoretically challenging task, since the concept applies techniques, such as conditioning and Bayes rule, whose applications to imprecise probability models substantially differ from their use in the classical models. We will examine the possibilities to model time reversal in terms of the models of imprecise probabilities and establish the relation between continuous random walks on weighted graphs, extending the methodology used in  \cite{skulj:16} for the discrete time case. A special emphasis will be on the computational issues. 
@@ -1169,23 +1169,7 @@ You might use a table or another type of scheme to clarify the work plan. Clearl
 
 % {\bf\color{blue} (WE WAIT WITH THIS PART FOR NOW...)}
 
-At the universities of Ghent and Ljubljana, a PhD fellowship, and therefore also the work on the proposed research, is usually spread over a period of four years.
-We have indicated these four years in the table below, and have divided every year into four periods of three months (i.e.~quarters).
-The work on the research was divided in work packages in the previous section.
-For each work package, the table provides a short description and indicates the quarters during which we expect the researchers to be working on it.
-We mark the boxes with a G indicating that the research on the topic in the specific quarter will be led by the Ghent group; an L indicates that the research will be led by the Ljubljana group. 
-After the initial research on a topic has been carried out, we plan to organise the discussion of the results, followed by joint work to finalise them. 
-B indicates the quarters where the work on the topics will be carried out by both groups. 
-
-After the work on a specific topic is finished, the results will be disseminated at research conferences and published in scientific journals. 
-The last two quarters are reserved for finishing the PhD theses. 
-
-%We tick the box of a quarter with an x to indicate almost certainties; these are the quarters during which we expect her to definitely spend time on the indicated work package.
-%We use o's to tick boxes for which we are not yet certain that she will need and/or use them.
-%These o-quarters are used to absorb setbacks or to allow for some flexibility, and indicate the maximum amount of time that we intend the student to spend on a given work package.
-%Of course, a good deal of the time in the last two quarters of year four will also be spent writing the PhD thesis, but we have not marked this in the table.
-
-\vspace{7pt}
+%\vspace{7pt}
 \begin{center}
 \resizebox{1\textwidth}{!}{%
 \begin{tabular}{r|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
@@ -1244,8 +1228,26 @@ The last two quarters are reserved for finishing the PhD theses.
 \textbf{WP5} & Time reversal         
 &   &   &   &   & L  &  L &  L &  L & B  & B & B & B & B & B &  &   
 \end{tabular}}
-\vspace{10pt}
+\vspace{7pt}
 \end{center}
+
+At the universities of Ghent and Ljubljana, a PhD fellowship, and therefore also the work on the proposed research, is usually spread over a period of four years.
+We have indicated these four years in the table above, and have divided every year into four periods of three months (i.e.~quarters).
+The work on the research was divided in work packages in the previous section.
+For each work package, the table provides a short description and indicates the quarters during which we expect the researchers to be working on it.
+We mark the boxes with a G indicating that the research on the topic in the specific quarter will be led by the Ghent group; an L indicates that the research will be led by the Ljubljana group. 
+After the initial research on a topic has been carried out, we plan to organise the discussion of the results, followed by joint work to finalise them. 
+B indicates the quarters where the work on the topics will be carried out by both groups. 
+
+After the work on a specific topic is finished, the results will be disseminated at research conferences and published in scientific journals. 
+The last two quarters are reserved for finishing the PhD theses. 
+
+%We tick the box of a quarter with an x to indicate almost certainties; these are the quarters during which we expect her to definitely spend time on the indicated work package.
+%We use o's to tick boxes for which we are not yet certain that she will need and/or use them.
+%These o-quarters are used to absorb setbacks or to allow for some flexibility, and indicate the maximum amount of time that we intend the student to spend on a given work package.
+%Of course, a good deal of the time in the last two quarters of year four will also be spent writing the PhD thesis, but we have not marked this in the table.
+
+
 % As explained in our methodology, the work on (WP2) is initiated after the work on (WP3) because it relies on some of its results. Furthermore, as also explained before, (WP6) is currently not at the core of the proposed research, but can serve as a contingency plan if necessary.
 
 
