@@ -791,7 +791,7 @@ As a brief look at the mathematics of these stochastic models will already show,
 
 Interestingly, in recent decades much progress has been made in extending the existing corpus of general probabilistic knowledge to deal with both types of limitations: the field of \emph{imprecise probabilities} \cite{walley1991,augustin2013:itip,troffaes2013:lp} has, amongst other things, developed well-justified, mathematically rigorous, as well as robust and efficient methods for dealing with both of them.
 Stated in very simple terms, an imprecise probability model is a probabilistic model that is partially specified.
-For example, whenever it is infeasible to reliably estimate the probability of some event, the theory imprecise probabilities allows for the use of a probability interval instead.
+For example, whenever it is infeasible to reliably estimate the probability of some event, the theory of imprecise probabilities allows for the use of a probability interval instead.
 Such partial specifications do not lead to a unique probability measure, but instead give rise to a set of compatible probability measures.
 These sets of probability measures are called credal sets.
 They are the basic uncertainty models in imprecise probability theory. 
@@ -816,7 +816,7 @@ Hartfiel \cite{hartfiel1998}, using the name \emph{Markov set-chains}, focussed 
 Unaware of Hartfiel's work, Kozine and Utkin~\cite{utkin:02} proposed an approach with a different underlying interpretation, and very different computational aspects. 
 Instead of allowing transition probabilities to vary within given bounds from one time step (or state) to the next, they assumed a single precise but unknown Markov model: they worked with sets of precise Markov chains. 
 
-The first systematic anf fully rigorous approach to combining discrete-time Markov chains with imprecise probabilities is due to De Cooman et al.~\cite{cooman2008}, using the idea of lower conditional expectations---also called lower transition operators. 
+The first systematic and fully rigorous approach to combining discrete-time Markov chains with imprecise probabilities is due to De Cooman et al.~\cite{cooman2008}, using the idea of lower conditional expectations---also called lower transition operators. 
 Similar ideas were explored independently by Škulj~\cite{skulj:09}, who focussed instead on interval probability models and their associated convex sets of probability distributions. 
 For calculations and inferences, the main difference between the two approaches is that the lower transition operator approach in \cite{cooman2008} allows for very efficient backwards induction, in contrast with the much less efficient forward calculations typical in the sets of distributions approaches \cite{skulj:09}. 
 Lower transition operators, and the ideas used in the analysis of the limit behaviour of imprecise Markov chains, introduced in \cite{cooman2008}, became the basis for most of the later work on imprecise Markov chains. 
@@ -833,14 +833,14 @@ For imprecise Markov chains, Crossman and Škulj \cite{Crossman:2010} proved the
 More recent work has begun to address other practically useful properties of imprecise discrete-time Markov chains.
 Škulj \cite{skulj:2016b} uses coefficients of ergodicity to measure the sensitivity of imprecise Markov chains to perturbations in its parameters. 
 A systematic study of expected time to absorption, expected return times, stopping times, hitting  probabilities, and ergodicity was initiated in \cite{troffaes:2013, cooman2015:markovergodic}, but a complete theory is still under development. 
-Time reversal and reversible Markov chains they rely on specific properties of transition operators and stationary distributions that turn out to be quite hard to extend to their imprecise versions. 
+Time reversal and reversible Markov chains rely on specific properties of transition operators and stationary distributions that turn out to be quite hard to extend to their imprecise versions. 
 Although a complete description of reversible processes is not yet possible, a first successful attempt was made by Škulj~\cite{skulj:16}, by studying a special family of reversible imprecise Markov chains that are obtained as random walks on weighted graphs. 
 
 \emph{State of the art for continuous-time imprecise Markov chains}\\[5pt]
 The discussion above, as well as the bulk of the literature on imprecise Markov chains, deals mainly with their discrete-time variant: very little is known about how to deal with robustness and imprecision in continuous-time Markov chains. 
 Imprecise continuous-time Markov chains can be related---be it rather artificially---to continuous-time Markov decision processes and controlled Markov chains; these notions share the basic idea of multiple possible transition scenarios.
 Addressing them using the ideas and efficient techniques of imprecise probabilities has only been attempted very recently \cite{skulj2015:continuous:bounds,Troffaes+GSB-ISIPTA15p,DeBock:2016:iCTMClimit}.
-Many basic conceptual, theoretical and computational problems have yet to be solved, and the relationship with the continuous-time versions of imprecise probability trees and closed convex sets if submartingales has yet to be explored.
+Many basic conceptual, theoretical and computational problems have yet to be solved, and the relationship with the continuous-time versions of imprecise probability trees and closed convex sets of submartingales has yet to be explored.
 So far, Škulj \cite{skulj2015:continuous:bounds} has used ideas from the discrete-time approach to introduce imprecise versions of transition rate matrices and establish an appropriate counterpart for Kolmogorov's backward equation, leading to a non-linear differential state evolution equation. 
 He proved that it has maximal and minimal solutions that characterise all possible solutions. Finding these boundary solutions numerically is still very much a problem under study, but has huge potential for practical applications.
 
