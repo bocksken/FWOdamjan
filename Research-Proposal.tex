@@ -820,28 +820,9 @@ Such informal discussions lie at the basis of this joint project proposal.
 
 \begin{shaded}\centering PROJECT OUTLINE \end{shaded}
 
-{\color{red}
-\begin{itemize}
-\item
-We should acknowledge and our incorporate our most recent work on imprecise continuous-time Markov chains
-\item
-A reviewer said that the speed of convergence should be explicitly mentioned in research line 3 (because it is relevant to Work Package 3b)
-\item
-A general complaint was that we did not sufficiently explain and argue why the topic is important. Some reviewers were concerned that it was a niche-concept that was of little importance outside of the IP research field. We should argue for its practical relevance (for example, for which type of applications would the things we want to try and compute be relevant). Especially the advantage of IP over for example second-order methods was not clear to some reviewers.
-\item
-One reviewer were mentioned that we were perhaps optimisitic about the ease with which we can move from discrete time to continuous-time.
-\item
-The intended exchanges of researchers should be mentioned more explicitly
-\item
-One of the reviewers asked for some more concrete info on how we intend to coordinate this project (beyond just indicating which topics we will collaborate on)
-\item
-One of the reviewers said that the work in http://www.probabilityandfinance.com/articles/43.pdf is relevant, as well as some of the references therein
-\item
-One of the reviewers suggested to replace [18,19] with Vovk's earlier work in characterising the poisson process: `Forecasting point and continuous processes: prequential analysis', because it is more relevant
-\end{itemize}}
-
 
 \textbf{Indicate the state of the art.}
+\vspace{-2pt}
 
 This project is concerned with imprecise Markov chains: robust generalisations of Markov chains, based on the theory of imprecise probabilities. 
 In this state of the art section, we briefly introduce Markov chains and imprecise probabilities, explain how they can be combined to obtain imprecise Markov chains, and then go on to give an overview of recent advances in this field.
@@ -850,8 +831,8 @@ In this state of the art section, we briefly introduce Markov chains and impreci
 \emph{Markov chains}\\[5pt]
 A \emph{discrete-time} \emph{finite-state} \emph{Markov chain} is a special stochastic process. 
 It models the time evolution in discrete time steps of a system that can be in a finite number of states.
-It is \emph{stochastic} because the model is given in terms of probabilities, such as, for example, the probability to be in a certain state at a given time.
-It is a Markov chain because the probabilistic model satisfies a \emph{Markov condition}: the (so-called) transition probability to be in a certain state at the next time step only depends on the current state, and not on the past states.
+It is \emph{stochastic} because the model is given in terms of probabilities, such as the probability to be in a given state at a given time.
+It is a Markov chain because it satisfies a \emph{Markov condition}: the transition probability to be in a certain state at the next time step only depends on the current state, and not on the past states.
 The probabilistic time evolution of the state of such Markov chains is described by linear difference equations.
 In \emph{continuous-time Markov chains}, the time steps become infinitesimally small, and their time evolution is described by linear differential equations. 
 Both discrete and continuous-time Markov chains belong to the most powerful, and---due to their reasonable computational complexity---the most widely used probabilistic models in a very wide range of applications in engineering (filtering, control, queueing), AI (text and speech recognition), mathematical finance and bio-informatics, to name only a few domains.
@@ -900,31 +881,30 @@ Lower transition operators, and the ideas used in the analysis of the limit beha
 They also emerge naturally as special cases in the above-mentioned theory of imprecise stochastic processes based on imprecise probability trees and closed convex sets of submartingales~\cite{cooman2015:markovergodic}.
 
 One topic that has been studied extensively, is the limit---or stationary---behaviour of imprecise Markov chains, which is very important and useful when looking at practical applications.
-Necessary and sufficient conditions for convergence to a unique attractor, expressed in terms of properties of transition operators, were studied by De Cooman and Hermans \cite{cooman2008,hermans2012}: although such convergence seems easier to attain for imprecise Markov chains, its characterisation becomes rather more involved.
+Necessary and sufficient conditions for convergence to a unique attractor, expressed in terms of properties of transition operators, were studied by De Cooman and Hermans \cite{cooman2008,hermans2012}. %: although such convergence seems easier to attain for imprecise Markov chains, its characterisation becomes rather more involved.
 Škulj and Hable \cite{skulj2013} characterised unique convergence in terms of coefficients of ergodicity: in addition to providing conditions for convergence, these also measure its rate. 
 When there is no unique attractor, imprecise Markov chains display a very different behaviour from precise models. 
 The analysis of accessibility between states becomes much more complicated, as does the analysis of the structure of invariant imprecise distributions. 
-Škulj \cite{skulj:13b} provided a general classification of such invariant distributions. Also practically useful is the so-called conditional convergence for Markov chains with absorbing states and certain absorption: in the long run the chain will be absorbed into the absorbing state, but, under regularity assumptions, the distribution conditional on the event that the chain has not yet been absorbed converges to a stationary distribution. 
-For imprecise Markov chains, Crossman and Škulj \cite{Crossman:2010} proved the existence of a unique imprecise stationary conditional distribution under regularity assumptions. 
+Škulj \cite{skulj:13b} provided a general classification of such invariant distributions. Also practically useful is the so-called conditional convergence for Markov chains with absorbing states and certain absorption: in the long run the chain will be absorbed into the absorbing state, but the distribution conditional on the event the chain has not yet been absorbed may still converge to a stationary distribution. 
+For imprecise Markov chains, this problem was solved by Crossman and Škulj \cite{Crossman:2010}.
+% proved the existence of a unique imprecise stationary conditional distribution under regularity assumptions. 
 
 More recent work has begun to address other practically useful properties of imprecise discrete-time Markov chains.
 Škulj \cite{skulj:2016b} uses coefficients of ergodicity to measure the sensitivity of imprecise Markov chains to perturbations in its parameters. 
 A systematic study of expected time to absorption, expected return times, stopping times, hitting  probabilities, and ergodicity was initiated in \cite{troffaes:2013, cooman2015:markovergodic}, but a complete theory is still under development. 
-Time reversal and reversible Markov chains rely on specific properties of transition operators and stationary distributions that turn out to be quite hard to extend to their imprecise versions. 
-Although a complete description of reversible processes is not yet possible, a first successful attempt was made by Škulj~\cite{skulj:16}, by studying a special family of reversible imprecise Markov chains that are obtained as random walks on weighted graphs. 
+%Time reversal and reversible Markov chains rely on specific properties of transition operators and stationary distributions that turn out to be quite hard to extend to their imprecise versions. 
+%Although a complete description of reversible processes is not yet possible, 
+A preliminary study of time-reversal  was made by Škulj~\cite{skulj:16}, for a special family of imprecise Markov chains that are obtained as random walks on weighted graphs. 
 
 \emph{State of the art for continuous-time imprecise Markov chains}\\[5pt]
 The discussion above, as well as the bulk of the literature on imprecise Markov chains, deals mainly with their discrete-time variant: very little is known about how to deal with robustness and imprecision in continuous-time Markov chains. 
 Imprecise continuous-time Markov chains can be related---be it rather artificially---to continuous-time Markov decision processes and controlled Markov chains; these notions share the basic idea of multiple possible transition scenarios.
-Addressing them using the ideas and efficient techniques of imprecise probabilities has only been attempted very recently \cite{skulj2015:continuous:bounds,Troffaes+GSB-ISIPTA15p,DeBock:2016:iCTMClimit}.
-Many basic conceptual, theoretical and computational problems have yet to be solved, and the relationship with the continuous-time versions of imprecise probability trees and closed convex sets of submartingales has yet to be explored.
-So far, Škulj \cite{skulj2015:continuous:bounds} has used ideas from the discrete-time approach to introduce imprecise versions of transition rate matrices and establish an appropriate counterpart for Kolmogorov's backward equation, leading to a non-linear differential state evolution equation. 
-He proved that it has maximal and minimal solutions that characterise all possible solutions. Finding these boundary solutions numerically is still very much a problem under study, but has huge potential for practical applications.
+Addressing them using the ideas and efficient techniques of imprecise probabilities has only been attempted very recently \cite{skulj2015:continuous:bounds,Troffaes+GSB-ISIPTA15p,DeBock:2016:iCTMClimit,rottondi2017:flexigrid,erreygers2017:ictmcs}.
+Many basic conceptual, theoretical and computational problems have yet to be solved, and the relationship with continuous-time versions of imprecise probability trees and closed convex sets of submartingales has yet to be explored.
+% I removed the section below because we were failing to adhere to the page limit, and because these things are mentioned further on anyway.
+%So far, Škulj \cite{skulj2015:continuous:bounds} has used ideas from the discrete-time approach to introduce imprecise versions of transition rate matrices and establish an appropriate counterpart for Kolmogorov's backward equation, leading to a non-linear differential state evolution equation. He proved that it has maximal and minimal solutions that characterise all possible solutions. Finding these boundary solutions numerically is still very much a problem under study, but has huge potential for practical applications.
 
-%% addition about the applications
-\emph{Relation with other fields}
 
-Imprecision can be present in virtually every area of application of Markov chains, which makes our proposed models immediately applicable in a variety of fields. The recently proposed discrete time Markov chain model has received attention in reliability theory. It has been shown that imprecise Markov chains are very suitable for model checking (\cite{troffaes:2013}). We therefore expect the continuous time models to be directly applicable in continuous time model checking. Other possible applications include assessment of transition-rate importance (\cite{ramirez2015assessment}) and maintenance optimization (\cite{baraldi2013maintenance, compare2015genetic}). 
 
 \vspace{3mm}
 
@@ -948,6 +928,11 @@ Indeed, the practical advantage of our `imprecise' approach is that it explicitl
 The framework of results and inference methods to be developed will be able to predict the effect of this model uncertainty on specific interesting functions of state variables, for example by providing lower and upper bounds on their expectations. 
 The results of such inferences can then be used in various applications and situations, for instance to make safer design choices that are more robust against modelling errors.
 
+%% addition about the applications
+\emph{Relation with other fields}
+
+Imprecision can be present in virtually every area of application of Markov chains, which makes our proposed models immediately applicable in a variety of fields. The recently proposed discrete time Markov chain model has received attention in reliability theory. It has been shown that imprecise Markov chains are very suitable for model checking (\cite{troffaes:2013}). We therefore expect the continuous time models to be directly applicable in continuous time model checking. Other possible applications include assessment of transition-rate importance (\cite{ramirez2015assessment}) and maintenance optimization (\cite{baraldi2013maintenance, compare2015genetic}). 
+
 The proposed research is unconventional from the perspective of both domains that intersect in this project.
 From the point of view of Markov chain theory, it is unconventional because it does away with two traditional assumptions: the Markov condition is replaced by a weaker version, and the probabilities that make up the model do not have to be specified exactly. 
 And from the imprecise probability perspective, this project is unconventional because time is taken to be continuous, whereas past research on imprecise stochastic processes has focussed almost unanimously on discrete-time problems.
@@ -964,7 +949,7 @@ Describe the different envisaged steps in your research, including intermediate 
 Show where the proposed methodology is according to the state of the art and where it is novel.
 Enclose risks that might endanger reaching project objectives and the contingency plans to be put in place should risk occur.}
 
-As explained in the objectives section, we intend to pursue three lines of research, each of which has been very successful for precise continuous-time Markov chains, but none of which has so far seen significant progress in the imprecise case; a detailed plan for each is outlined below. 
+As explained in the objectives section, we intend to pursue three lines of research, each of which has been very successful for precise continuous-time Markov chains, but none of which has so far seen significant progress in the imprecise case; a detailed plan is outlined below. 
 Each research line will initially be carried out by a dedicated full-time PhD student, under the close supervision of the (co-)supervisors and a part-time senior researcher. 
 As time and research progresses, we expect these research lines to benefit from each other, leading to intensive collaborations between the respective students (and their supervisors). Concrete topics for collaboration are discussed within the following detailed plans.
 
@@ -978,7 +963,8 @@ This research can be divided into the following three work packages.
 % The first step in this line of research will be for the student to \emph{study the relevant existing literature on imprecise probabilities and imprecise stochastic processes} as described above, and to familiarise herself thoroughly with measure-theoretic and martingale-theoretic approaches to probability {\bf(Work Package 1a)}.
 \item The first step will consist in \emph{investigating how to define an imprecise probability tree, and in particular an imprecise Markov chain, in continuous time}: what are the possible paths and nodes, how can we define local imprecise probability models attached to these nodes, and how do we formulate a Markov condition for them?
 In addition, it must be investigated how to define the submartingales associated with such a continuous-time imprecise probability tree, and whether and how this definition simplifies when we impose the Markov condition {\bf(Work Package~1a)}.
-To achieve this, we can draw inspiration from earlier game-theoretic probability work done by Vovk in characterising the (precise) probability tree associated with continuous-time Brownian motion \cite{vovk2008:brownian,vovk2012:emergence:of:probability}, a special case of a Markov chain.
+To achieve this, we can draw inspiration from earlier game-theoretic probability work on continuous-time stochastic processes\cite{vovk1993:forecasting,vovk2016:richquick}. 
+%\cite{vovk2008:brownian,vovk2012:emergence:of:probability}, a special case of a Markov chain.
 % with fully independent local models.
 %Indeed, much of the this line of research can be seen to consist in generalising and extending his ideas from Brownian motion to Markov chains.
 %Therefore, the fact that solid and very interesting results can be obtained for Brownian motion---which is a special case of a Markov chain with fully independent local models---strongly indicates that the present line of research is indeed feasible, though not trivial.
@@ -1302,168 +1288,168 @@ The last two quarters of the fourth year are intentionally left blank, because t
 %     \end{tabular}
 % \end{table}
 
-\vspace{-3pt}
+\vspace{-10pt}
 
 \bibliographystyle{plain}
 \renewcommand\refname{\normalsize Enumerate the bibliographical references that are relevant for your research proposal.}
-%\bibliography{bibliography,general}
-\begin{thebibliography}{10}
+\bibliography{bibliography,general}
+%\begin{thebibliography}{10}
 
-\bibitem{augustin2013:itip}
-T. Augustin, F.~P.~A. Coolen, G. De Cooman and M.~C.~M.
-  Troffaes, editors.
-\newblock {\em Introduction to Imprecise Probabilities}.
-\newblock John Wiley \& Sons, 2014.
+% \bibitem{augustin2013:itip}
+% T. Augustin, F.~P.~A. Coolen, G. De Cooman and M.~C.~M.
+%   Troffaes, editors.
+% \newblock {\em Introduction to Imprecise Probabilities}.
+% \newblock John Wiley \& Sons, 2014.
 
-\bibitem{Crossman:2010}
-R.~J. Crossman and D.~\v{S}kulj.
-\newblock Imprecise {M}arkov chains with absorption.
-\newblock {\em International Journal of Approximate Reasoning}, 51:1085--1099,
-  2010.
+% \bibitem{Crossman:2010}
+% R.~J. Crossman and D.~\v{S}kulj.
+% \newblock Imprecise {M}arkov chains with absorption.
+% \newblock {\em International Journal of Approximate Reasoning}, 51:1085--1099,
+%   2010.
 
-\bibitem{debock2015:thesis}
-J. De~Bock.
-\newblock {\em Credal Networks under Epistemic Irrelevance: Theory and
-  Algorithms}.
-\newblock PhD thesis, Ghent University, Faculty of Engineering and
-  Architecture, 2015.
+% \bibitem{debock2015:thesis}
+% J. De~Bock.
+% \newblock {\em Credal Networks under Epistemic Irrelevance: Theory and
+%   Algorithms}.
+% \newblock PhD thesis, Ghent University, Faculty of Engineering and
+%   Architecture, 2015.
 
-\bibitem{DeBock:2016:iCTMClimit}
-J. De~Bock.
-\newblock {Convergence of Continuous-Time Imprecise Markov Chains}.
-\newblock 2016.
-\newblock ArXiv:1602.05478.
+% \bibitem{DeBock:2016:iCTMClimit}
+% J. De~Bock.
+% \newblock {Convergence of Continuous-Time Imprecise Markov Chains}.
+% \newblock 2016.
+% \newblock ArXiv:1602.05478.
 
-\bibitem{debock2014:estihmm}
-J. De~Bock and G. De~Cooman.
-\newblock An efficient algorithm for estimating state sequences in imprecise
-  hidden {M}arkov models.
-\newblock {\em Journal of Artificial Intelligence Research}, 50:189--233, 2014.
+% \bibitem{debock2014:estihmm}
+% J. De~Bock and G. De~Cooman.
+% \newblock An efficient algorithm for estimating state sequences in imprecise
+%   hidden {M}arkov models.
+% \newblock {\em Journal of Artificial Intelligence Research}, 50:189--233, 2014.
 
-\bibitem{cooman2015:markovergodic}
-G. De Cooman, J. De~Bock and S. Lopatatzidis.
-\newblock A study of imprecise {M}arkov chains: joint lower expectations and
-  point-wise ergodic theorems.
-\newblock {\em International Journal of Approximate Reasoning}, 2015.
-\newblock Accepted for publication.
+% \bibitem{cooman2015:markovergodic}
+% G. De Cooman, J. De~Bock and S. Lopatatzidis.
+% \newblock A study of imprecise {M}arkov chains: joint lower expectations and
+%   point-wise ergodic theorems.
+% \newblock {\em International Journal of Approximate Reasoning}, 2015.
+% \newblock Accepted for publication.
 
-\bibitem{cooman2007d}
-G. De Cooman and F. Hermans.
-\newblock Imprecise probability trees: Bridging two theories of imprecise
-  probability.
-\newblock {\em Artificial Intelligence}, 172(11):1400--1427, 2008.
+% \bibitem{cooman2007d}
+% G. De Cooman and F. Hermans.
+% \newblock Imprecise probability trees: Bridging two theories of imprecise
+%   probability.
+% \newblock {\em Artificial Intelligence}, 172(11):1400--1427, 2008.
 
-\bibitem{cooman2009}
-G. De Cooman, F. Hermans, A. Antonucci, and M. Zaffalon.
-\newblock Epistemic irrelevance in credal nets: the case of imprecise {M}arkov
-  trees.
-\newblock {\em International Journal of Approximate Reasoning}, 51:1029--1052,
-  2010.
+% \bibitem{cooman2009}
+% G. De Cooman, F. Hermans, A. Antonucci, and M. Zaffalon.
+% \newblock Epistemic irrelevance in credal nets: the case of imprecise {M}arkov
+%   trees.
+% \newblock {\em International Journal of Approximate Reasoning}, 51:1029--1052,
+%   2010.
 
-\bibitem{cooman2008}
-G. De Cooman, F. Hermans and E. Quaeghebeur.
-\newblock Imprecise {M}arkov chains and their limit behaviour.
-\newblock {\em Probability in the Engineering and Informational Sciences},
-  23(4):597--635, 2009.
+% \bibitem{cooman2008}
+% G. De Cooman, F. Hermans and E. Quaeghebeur.
+% \newblock Imprecise {M}arkov chains and their limit behaviour.
+% \newblock {\em Probability in the Engineering and Informational Sciences},
+%   23(4):597--635, 2009.
 
-\bibitem{hartfiel1998}
-D.~J. Hartfiel.
-\newblock {\em {Markov} Set-Chains}. Springer, Berlin, 1998.
+% \bibitem{hartfiel1998}
+% D.~J. Hartfiel.
+% \newblock {\em {Markov} Set-Chains}. Springer, Berlin, 1998.
 
-\bibitem{hermans2012}
-F. Hermans and G. De Cooman.
-\newblock Characterisation of ergodic upper transition operators.
-\newblock {\em International Journal of Approximate Reasoning}, 53(4):573--583,
-  2012.
+% \bibitem{hermans2012}
+% F. Hermans and G. De Cooman.
+% \newblock Characterisation of ergodic upper transition operators.
+% \newblock {\em International Journal of Approximate Reasoning}, 53(4):573--583,
+%   2012.
 
-\bibitem{utkin:02}
-I.~Kozine and L.~V. Utkin.
-\newblock Interval-valued finite {M}arkov chains.
-\newblock {\em Reliable Computing}, 8(2):97--113, 2002.
+% \bibitem{utkin:02}
+% I.~Kozine and L.~V. Utkin.
+% \newblock Interval-valued finite {M}arkov chains.
+% \newblock {\em Reliable Computing}, 8(2):97--113, 2002.
 
-\bibitem{shafer2001}
-G. Shafer and V. Vovk.
-\newblock {\em Probability and Finance: It's Only a Game!}
-\newblock Wiley, New York, 2001.
+% \bibitem{shafer2001}
+% G. Shafer and V. Vovk.
+% \newblock {\em Probability and Finance: It's Only a Game!}
+% \newblock Wiley, New York, 2001.
 
-\bibitem{troffaes:2013}
-D. \v{S}kulj and M. C. M. Troffaes.
-\newblock Model checking for imprecise markov chains. 
-\newblock In {\em Proceedings of the 8th International Symposium on Imprecise
-  Probability: Theories and Applications}, pages 337--344, 2013.
+% \bibitem{troffaes:2013}
+% D. \v{S}kulj and M. C. M. Troffaes.
+% \newblock Model checking for imprecise markov chains. 
+% \newblock In {\em Proceedings of the 8th International Symposium on Imprecise
+%   Probability: Theories and Applications}, pages 337--344, 2013.
 
-\bibitem{troffaes2013:lp}
-Matthias C.~M. Troffaes and Gert {d}e Cooman.
-\newblock {\em Lower Previsions}.
-\newblock Wiley, 2014.
+% \bibitem{troffaes2013:lp}
+% Matthias C.~M. Troffaes and Gert {d}e Cooman.
+% \newblock {\em Lower Previsions}.
+% \newblock Wiley, 2014.
 
-\bibitem{Troffaes+GSB-ISIPTA15p}
-M.~C.~M. Troffaes, J. Gledhill, D. \v{S}kulj and S. Blake.
-\newblock Using imprecise continuous time markov chains for assessing the
-  reliability of power networks with common cause failure and non-immediate
-  repair.
-\newblock In {\em Proceedings of the 9th International Symposium on Imprecise
-  Probability: Theories and Applications}, pages 287--294, 2015.
+% \bibitem{Troffaes+GSB-ISIPTA15p}
+% M.~C.~M. Troffaes, J. Gledhill, D. \v{S}kulj and S. Blake.
+% \newblock Using imprecise continuous time markov chains for assessing the
+%   reliability of power networks with common cause failure and non-immediate
+%   repair.
+% \newblock In {\em Proceedings of the 9th International Symposium on Imprecise
+%   Probability: Theories and Applications}, pages 287--294, 2015.
 
-\bibitem{ville1939}
-J. Ville.
-\newblock {\em \'Etude critique de la notion de collectif}.
-\newblock Gauthier-Villars, Paris, 1939.
+% \bibitem{ville1939}
+% J. Ville.
+% \newblock {\em \'Etude critique de la notion de collectif}.
+% \newblock Gauthier-Villars, Paris, 1939.
 
-\bibitem{vovk2008:brownian}
-V.~G. Vovk.
-\newblock Game-theoretic {B}rownian motion.
-\newblock 2016.
-\newblock ArXiv:0801.1309.
+% \bibitem{vovk2008:brownian}
+% V.~G. Vovk.
+% \newblock Game-theoretic {B}rownian motion.
+% \newblock 2016.
+% \newblock ArXiv:0801.1309.
 
-\bibitem{vovk2012:emergence:of:probability}
-V.~G. Vovk.
-\newblock Continuous-time trading and the emergence of probability.
-\newblock {\em Finance and Stochastics}, 16(4):561--609, 2012.
+% \bibitem{vovk2012:emergence:of:probability}
+% V.~G. Vovk.
+% \newblock Continuous-time trading and the emergence of probability.
+% \newblock {\em Finance and Stochastics}, 16(4):561--609, 2012.
 
-\bibitem{skulj:09}
-D. \v{S}kulj.
-\newblock Discrete time {M}arkov chains with interval probabilities.
-\newblock {\em International Journal of Approximate Reasoning},
-  50(8):1314--1329, 2009.
+% \bibitem{skulj:09}
+% D. \v{S}kulj.
+% \newblock Discrete time {M}arkov chains with interval probabilities.
+% \newblock {\em International Journal of Approximate Reasoning},
+%   50(8):1314--1329, 2009.
 
-\bibitem{skulj:13b}
-D. \v{S}kulj.
-\newblock A classification of invariant distributions and convergence of
-  imprecise {M}arkov chains.
-\newblock {\em Linear Algebra and its Applications}, 439(9):2542--2561, 2013.
+% \bibitem{skulj:13b}
+% D. \v{S}kulj.
+% \newblock A classification of invariant distributions and convergence of
+%   imprecise {M}arkov chains.
+% \newblock {\em Linear Algebra and its Applications}, 439(9):2542--2561, 2013.
 
-\bibitem{skulj2015:continuous:bounds}
-D. \v{S}kulj.
-\newblock Efficient computation of the bounds of continuous time imprecise
-  {M}arkov chains.
-\newblock {\em Applied Mathematics and Computation}, 250:165--180, 2015.
+% \bibitem{skulj2015:continuous:bounds}
+% D. \v{S}kulj.
+% \newblock Efficient computation of the bounds of continuous time imprecise
+%   {M}arkov chains.
+% \newblock {\em Applied Mathematics and Computation}, 250:165--180, 2015.
 
-\bibitem{skulj:2016b}
-D. \v{S}kulj.
-\newblock Perturbation bounds and degree of imprecision for uniquely convergent
-  imprecise markov chains.
-  \newblock 2016.
-\newblock ArXiv:1602.08901.
+% \bibitem{skulj:2016b}
+% D. \v{S}kulj.
+% \newblock Perturbation bounds and degree of imprecision for uniquely convergent
+%   imprecise markov chains.
+%   \newblock 2016.
+% \newblock ArXiv:1602.08901.
 
-\bibitem{skulj:16}
-D. \v{S}kulj.
-\newblock Random walks on graphs with interval weights and precise marginals.
-\newblock {\em International Journal of Approximate Reasoning},
-  73:76--86, 2016.
+% \bibitem{skulj:16}
+% D. \v{S}kulj.
+% \newblock Random walks on graphs with interval weights and precise marginals.
+% \newblock {\em International Journal of Approximate Reasoning},
+%   73:76--86, 2016.
 
-\bibitem{skulj2013}
-D. \v{S}kulj and R. Hable.
-\newblock Coefficients of ergodicity for {M}arkov chains with uncertain
-  parameters.
-\newblock {\em Metrika}, 76(1):107--133, 2013.
+% \bibitem{skulj2013}
+% D. \v{S}kulj and R. Hable.
+% \newblock Coefficients of ergodicity for {M}arkov chains with uncertain
+%   parameters.
+% \newblock {\em Metrika}, 76(1):107--133, 2013.
 
-\bibitem{walley1991}
-P. Walley.
-\newblock {\em Statistical Reasoning with Imprecise Probabilities}.
-\newblock Chapman and Hall, London, 1991.
+% \bibitem{walley1991}
+% P. Walley.
+% \newblock {\em Statistical Reasoning with Imprecise Probabilities}.
+% \newblock Chapman and Hall, London, 1991.
 
-\end{thebibliography}
+%\end{thebibliography}
 
 \vspace{5mm}
 
@@ -1479,4 +1465,21 @@ The addition of imprecision to such problems only increases their potential for 
 In addition to purely educative or demonstrative purposes, Markov chains can also be used to develop relatively simple web-based tools that can serve to support business processes. 
 The Slovenian group has been involved in the successful development of such a web-based platform for prediction and strategy testing for the structure of Slovenian armed forces. 
 Such platforms would definitely benefit from models that allow for imprecision as well.
+
+
+{\color{red}
+\begin{itemize}
+\item
+We should acknowledge and our incorporate our most recent work on imprecise continuous-time Markov chains \cite{rottondi2017:flexigrid,erreygers2017:ictmcs}
+\item
+A reviewer said that the speed of convergence should be explicitly mentioned in research line 3 (because it is relevant to Work Package 3b)
+\item
+A general complaint was that we did not sufficiently explain and argue why the topic is important. Some reviewers were concerned that it was a niche-concept that was of little importance outside of the IP research field. We should argue for its practical relevance (for example, for which type of applications would the things we want to try and compute be relevant). Especially the advantage of IP over for example second-order methods was not clear to some reviewers. Applications range from ecology \cite{samuels2009phd} over telecommuncation networks \cite{rottondi2017:flexigrid} and finance~\cite{niemiec2007:bonusmalus} to power network analysis \cite{Troffaes+GSB-ISIPTA15p}
+\item
+One reviewer mentioned that we were perhaps optimisitic about the ease with which we can move from discrete time to continuous-time.
+\item
+The intended exchanges of researchers should be mentioned more explicitly
+\item
+One of the reviewers asked for some more concrete info on how we intend to coordinate this project (beyond just indicating which topics we will collaborate on)
+\end{itemize}}
 \end{document}
