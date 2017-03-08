@@ -926,19 +926,21 @@ Our research hypothesis is that by developing these three lines of research, it 
 
 Indeed, the practical advantage of our `imprecise' approach is that it explicitly acknowledges that we may not know the relevant probabilistic models exactly, and that, as a result, our inferences must be robust against such model uncertainty. 
 The framework of results and inference methods to be developed will be able to predict the effect of this model uncertainty on specific interesting functions of state variables, for example by providing lower and upper bounds on their expectations. 
-The results of such inferences can then be used in various applications and situations, for instance to make safer design choices that are more robust against modelling errors.
+The results of such inferences can then be used in various applications and situations, for instance to make predictions that are robust against modelling errors. For the discrete time case, examples of such applications can be found in a wide range of domains, including optical character recognition~\cite{debock2014:estihmm}, gesture recognition~\cite{soullard2017:gesturerecognition}, ecology \cite{samuels2009phd} and finance~\cite{niemiec2007:bonusmalus}. For the continuous-time case, however, we are aware of only two preliminary applications, in telecommunication networks~\cite{rottondi2017:flexigrid} and power system analysis~\cite{Troffaes+GSB-ISIPTA15p}, respectively. The aim of this research project is to develop theoretical results and computational methods for this continous-time case, thereby making it possible to tackle real-life large-scale applications as well.
+
+%Other possible applications include assessment of transition-rate importance (\cite{ramirez2015assessment}) and maintenance optimization (\cite{baraldi2013maintenance, compare2015genetic}). 
 
 %% addition about the applications
-\emph{Relation with other fields}
+%\emph{Relation with other fields}
 
-Imprecision can be present in virtually every area of application of Markov chains, which makes our proposed models immediately applicable in a variety of fields. The recently proposed discrete time Markov chain model has received attention in reliability theory. It has been shown that imprecise Markov chains are very suitable for model checking (\cite{troffaes:2013}). We therefore expect the continuous time models to be directly applicable in continuous time model checking. Other possible applications include assessment of transition-rate importance (\cite{ramirez2015assessment}) and maintenance optimization (\cite{baraldi2013maintenance, compare2015genetic}). 
+%Imprecision can be present in virtually every area of application of Markov chains, which makes our proposed models immediately applicable in a variety of fields. The recently proposed discrete time Markov chain model has received attention in reliability theory. It has been shown that imprecise Markov chains are very suitable for model checking (\cite{troffaes:2013}). We therefore expect the continuous time models to be directly applicable in continuous time model checking. 
 
 The proposed research is unconventional from the perspective of both domains that intersect in this project.
 From the point of view of Markov chain theory, it is unconventional because it does away with two traditional assumptions: the Markov condition is replaced by a weaker version, and the probabilities that make up the model do not have to be specified exactly. 
 And from the imprecise probability perspective, this project is unconventional because time is taken to be continuous, whereas past research on imprecise stochastic processes has focussed almost unanimously on discrete-time problems.
 
 Due to the unconventional nature of the proposed research, and because the topic is largely unexplored, the project will clearly be challenging. 
-However, given the extensive experience of both partners in studying various aspects of imprecise \emph{discrete-time} stochastic processes~\cite{cooman2007d,cooman2008,hermans2012,cooman2015:markovergodic}, we are convinced we have the necessary expertise to successfully tackle similar research problems in continuous time.
+However, given the extensive experience of both partners in studying various aspects of imprecise \emph{discrete-time} stochastic processes~\cite{cooman2007d,cooman2008,hermans2012,cooman2015:markovergodic,debock2014:estihmm}, and because we can build on our preliminary studies of the continuous time case~\cite{DeBock:2016:iCTMClimit,erreygers2017:ictmcs,rottondi2017:flexigrid,skulj2015}, we are convinced that we have the necessary expertise to successfully tackle this project.
 
 
 \vspace{7pt}
@@ -1474,9 +1476,7 @@ We should acknowledge and our incorporate our most recent work on imprecise cont
 \item
 A reviewer said that the speed of convergence should be explicitly mentioned in research line 3 (because it is relevant to Work Package 3b)
 \item
-A general complaint was that we did not sufficiently explain and argue why the topic is important. Some reviewers were concerned that it was a niche-concept that was of little importance outside of the IP research field. We should argue for its practical relevance (for example, for which type of applications would the things we want to try and compute be relevant). Especially the advantage of IP over for example second-order methods was not clear to some reviewers. Applications range from ecology \cite{samuels2009phd} over telecommuncation networks \cite{rottondi2017:flexigrid} and finance~\cite{niemiec2007:bonusmalus} to power network analysis \cite{Troffaes+GSB-ISIPTA15p}
-\item
-One reviewer mentioned that we were perhaps optimisitic about the ease with which we can move from discrete time to continuous-time.
+We should argue for its practical relevance (for example, for which type of applications would the things we want to try and compute be relevant).
 \item
 The intended exchanges of researchers should be mentioned more explicitly
 \item
