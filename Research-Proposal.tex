@@ -894,12 +894,12 @@ More recent work has begun to address other practically useful properties of imp
 A systematic study of expected time to absorption, expected return times, stopping times, hitting  probabilities, and ergodicity was initiated in \cite{troffaes:2013, cooman2015:markovergodic}, but a complete theory is still under development. 
 %Time reversal and reversible Markov chains rely on specific properties of transition operators and stationary distributions that turn out to be quite hard to extend to their imprecise versions. 
 %Although a complete description of reversible processes is not yet possible, 
-A preliminary study of time-reversal  was made by Škulj~\cite{skulj:16}, for a special family of imprecise Markov chains that are obtained as random walks on weighted graphs. 
+A preliminary study of time-reversal  was made by Škulj~\cite{skulj2016}, for a special family of imprecise Markov chains that are obtained as random walks on weighted graphs. 
 
 \emph{State of the art for continuous-time imprecise Markov chains}\\[5pt]
 The discussion above, as well as the bulk of the literature on imprecise Markov chains, deals mainly with their discrete-time variant: very little is known about how to deal with robustness and imprecision in continuous-time Markov chains. 
 Imprecise continuous-time Markov chains can be related---be it rather artificially---to continuous-time Markov decision processes and controlled Markov chains; these notions share the basic idea of multiple possible transition scenarios.
-Addressing them using the ideas and efficient techniques of imprecise probabilities has only been attempted very recently \cite{skulj2015:continuous:bounds,Troffaes+GSB-ISIPTA15p,DeBock:2016:iCTMClimit,rottondi2017:flexigrid,erreygers2017:ictmcs}.
+Addressing them using the ideas and efficient techniques of imprecise probabilities has only been attempted very recently \cite{skulj2015,Troffaes+GSB-ISIPTA15p,DeBock:2016:iCTMClimit,rottondi2017:flexigrid,erreygers2017:ictmcs}.
 Many basic conceptual, theoretical and computational problems have yet to be solved, and the relationship with continuous-time versions of imprecise probability trees and closed convex sets of submartingales has yet to be explored.
 % I removed the section below because we were failing to adhere to the page limit, and because these things are mentioned further on anyway.
 %So far, Škulj \cite{skulj2015:continuous:bounds} has used ideas from the discrete-time approach to introduce imprecise versions of transition rate matrices and establish an appropriate counterpart for Kolmogorov's backward equation, leading to a non-linear differential state evolution equation. He proved that it has maximal and minimal solutions that characterise all possible solutions. Finding these boundary solutions numerically is still very much a problem under study, but has huge potential for practical applications.
@@ -974,7 +974,7 @@ To achieve this, we can draw inspiration from earlier game-theoretic probability
 We also investigate whether this lower expectation operator can be expressed as a lower envelope of expectation operators associated with more traditional, measure-theoretic stochastic processes.
 %It may also be interesting, if rapid progress can be made and time allows it, to find out whether---as in the discrete-time case \cite{cooman2015:isipta:markov,cooman2015:markovergodic}---such an expression for the joint will allow for a formulation of ergodic theorems for continuous-time imprecise Markov chains.
 \item The final step consists in studying the mathematical properties of the continuous-time imprecise Markov model {\bf(Work Package 1c)}.
-As a first special case, we intend to check whether it allows for a derivation from first principles of a non-linear variant of the Chapman--Kolmogorov equations, similar to what \v{S}kulj \cite{skulj2015:continuous:bounds} found using more {\itshape ad hoc} arguments.
+As a first special case, we intend to check whether it allows for a derivation from first principles of a non-linear variant of the Chapman--Kolmogorov equations, similar to what \v{S}kulj \cite{skulj2015} found using more {\itshape ad hoc} arguments.
 That something similar is possible---and fairly straightforward---in the discrete-time case \cite{cooman2008}, should serve as an indication that this is indeed feasible. 
 A second special case will be to define stopping times, and to study their basic properties.
 \end{enumerate}
@@ -1000,7 +1000,7 @@ To do so, we will need to be able to efficiently compute distances between coher
 Known numerical examples suggest that this problem is challenging but solvable. 
 %To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems.
 \item The next task {\bf(Work Package 2b)} is to develop methods for calculating tight bounds on expectations of functions of the states of an imprecise Markov chain. 
-First, we intend to extend existing methods for functions that depend on the state at a single time in the future~\cite{skulj2015:continuous:bounds}, which fail when the time interval grows large. 
+First, we intend to extend existing methods for functions that depend on the state at a single time in the future~\cite{skulj2015}, which fail when the time interval grows large. 
 To overcome this, we intend to exploit the contracting nature of Markov transition operators, using the coefficients of ergodicity of Work Package 2a. 
 Later, we will also try and compute expectations for more general functions, including important stopping times---the expected time to absorption and expected return times---and probabilities of general events---absorption probabilities.
 \item The third task {\bf(Work Package 2c)} is error estimation.
@@ -1097,7 +1097,7 @@ Nevertheless, our results can be used to study and solve a variety of practical 
 Since real applications are an ideal testing ground for new theory, it would be nice to tackle such applications {\bf (Work Package 4)}; the choice of application will depend on the level of complexity that the developed framework will by then be able to deal with.
 
 A second extra research topic is time reversibility.
-This concept is very important for (precise) stochastic processes, but it has not yet been systematically studied in the framework of imprecision; to the best of our knowledge, the preliminary results in Reference~\cite{skulj:16} are the only exception.
+This concept is very important for (precise) stochastic processes, but it has not yet been systematically studied in the framework of imprecision; to the best of our knowledge, the preliminary results in Reference~\cite{skulj2016} are the only exception.
 Therefore, a systematic analysis of imprecise continuous-time reversible Markov chains {\bf (Work Package 5)} would definitely be an interesting research topic to pursue.
 %The first task is a formal approach to time reversal for processed based on imprecise probabilities
 % This is a theoretically challenging task, since the concept applies techniques, such as conditioning and Bayes rule, whose applications to imprecise probability models substantially differ from their use in the classical models. We will examine the possibilities to model time reversal in terms of the models of imprecise probabilities and establish the relation between continuous random walks on weighted graphs, extending the methodology used in  \cite{skulj:16} for the discrete time case. A special emphasis will be on the computational issues. 
