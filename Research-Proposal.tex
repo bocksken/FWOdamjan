@@ -926,7 +926,7 @@ Our research hypothesis is that by developing these three lines of research, it 
 
 Indeed, the practical advantage of our `imprecise' approach is that it explicitly acknowledges that we may not know the relevant probabilistic models exactly, and that, as a result, our inferences must be robust against such model uncertainty. 
 The framework of results and inference methods to be developed will be able to predict the effect of this model uncertainty on specific interesting functions of state variables, for example by providing lower and upper bounds on their expectations. 
-The results of such inferences can then be used in various applications and situations to make predictions that are robust against modelling errors. In discrete time, examples can be found in a wide range of domains, including, gesture recognition~\cite{soullard2017:gesturerecognition}, OCR~\cite{debock2014:estihmm}, ecology \cite{samuels2009phd} and finance~\cite{niemiec2007:bonusmalus}. For the continuous-time case, however, there are only two preliminary applications, in telecommunication networks~\cite{rottondi2017:flexigrid} and power system analysis~\cite{Troffaes+GSB-ISIPTA15p}. The aim of this research project is to develop theoretical results and computational methods for this continous-time case, thereby making it possible to tackle a wide range of real applications.
+The results of such inferences can then be used in various applications to make predictions that are robust against modelling errors. In discrete time, examples can be found in a wide range of domains, including, gesture recognition~\cite{soullard2017:gesturerecognition}, optical character recognition~\cite{debock2014:estihmm}, ecology \cite{samuels2009phd} and finance~\cite{niemiec2007:bonusmalus}. For the continuous-time case, however, there are only two preliminary applications, in telecommunication networks~\cite{rottondi2017:flexigrid} and power system analysis~\cite{Troffaes+GSB-ISIPTA15p}. The aim of this research project is to develop theoretical results and computational methods for this continous-time case, thereby making it possible to tackle a wide range of real applications.
 
 %Other possible applications include assessment of transition-rate importance (\cite{ramirez2015assessment}) and maintenance optimization (\cite{baraldi2013maintenance, compare2015genetic}). 
 
@@ -940,7 +940,7 @@ From the point of view of Markov chain theory, it is unconventional because it d
 And from the imprecise probability perspective, this project is unconventional because time is taken to be continuous, whereas past research on imprecise stochastic processes has focussed almost unanimously on discrete-time problems.
 
 Due to the unconventional nature of the proposed research, and because the topic is largely unexplored, the project will clearly be challenging. 
-However, given the extensive experience of both partners in studying various aspects of imprecise \emph{discrete-time} stochastic processes~\cite{cooman2007d,cooman2008,hermans2012,cooman2015:markovergodic,debock2014:estihmm}, and because we can build on our preliminary studies of the continuous time case~\cite{DeBock:2016:iCTMClimit,erreygers2017:ictmcs,rottondi2017:flexigrid,skulj2015}, we are convinced that we have the necessary expertise to successfully tackle this project.
+However, given the extensive experience of both partners in studying various aspects of imprecise \emph{discrete-time} stochastic processes~\cite{cooman2007d,cooman2008,hermans2012,cooman2015:markovergodic,debock2014:estihmm}, and because we can build on our preliminary work on the continuous-time case~\cite{DeBock:2016:iCTMClimit,erreygers2017:ictmcs,rottondi2017:flexigrid,skulj2015}, we are convinced that we have the necessary expertise to successfully tackle this project.
 
 
 \vspace{7pt}
@@ -982,9 +982,9 @@ Since the Chapman-Kolmogorov equations and stopping times lie at the basis of ma
 
 \emph{Computational methods} {\bf (Research Line 2)}.\\[3pt]
 While precise Markov chain theory often relies heavily on linear algebra, this is no longer true for imprecise Markov chains, where we need to resort to linear programming techniques. 
-Consequently, in the majority of cases, solutions will have to be obtained in numerical form.
+Consequently, in the majority of cases, solutions have to be obtained in numerical form.
 Computational methods are therefore important, and must be developed alongside with theoretical concepts. 
-The second general goal of this project is therefore to develop and improve numerical methods. This line of research can be divided into the following four work packages.
+The second general goal of this project is therefore to develop and improve numerical methods. We foresee four work packages.
 
 %This is especially true for the continuous time case, because in principle we would have infinite number of time steps where a linear programming problems would have to be solved. 
 %Instead of that we have to do some kind of discretisation. 
@@ -996,17 +996,19 @@ The second general goal of this project is therefore to develop and improve nume
 \begin{enumerate}[label=\tiny$\blacksquare$,leftmargin=*,noitemsep]
 \item The first step will be to define and compute coefficients of ergodicity (and other contraction measures) for imprecise continuous-time Markov chains {\bf(Work Package 2a)}. 
 By analogy with the discrete-time case~\cite{skulj2013}, we expect it will be difficult to evaluate the theoretical definitions directly, so indirect computational methods will need to be developed. 
-To do so, we will need to be able to efficiently compute distances between coherent lower previsions that are only partially specified. 
-Known numerical examples suggest that this problem is challenging but solvable. 
+In order to do so, we will start by designing efficient methods for computing distances between partially specified coherent lower previsions. 
+%Known numerical examples suggest that this problem is challenging but solvable. 
 %To solve this problem we will use methods of convex analysis and the theory of perturbations of linear programming problems.
-\item The next task {\bf(Work Package 2b)} is to develop methods for calculating tight bounds on expectations of functions of the states of an imprecise Markov chain. 
-First, we intend to extend existing methods for functions that depend on the state at a single time in the future~\cite{skulj2015}, which fail when the time interval grows large. 
+\item The next task {\bf(Work Package 2b)} is to develop methods for calculating tight bounds on expectations %of functions of the states of 
+in
+an imprecise Markov chain. 
+First, we intend to extend existing methods for functions that depend on the state at a single time in the future~\cite{skulj2015,erreygers2017:ictmcs}, which fail---or become too conservative---when the time interval is large. 
 To overcome this, we intend to exploit the contracting nature of Markov transition operators, using the coefficients of ergodicity of Work Package 2a. 
-Later, we will also try and compute expectations for more general functions, including important stopping times---the expected time to absorption and expected return times---and probabilities of general events---absorption probabilities.
+Next, we will also try and compute expectations for more general functions, including special cases of the stopping times of Work Package 1c, such as the expected time to absorption and expected return times.%---and probabilities of general events---absorption probabilities.
 \item The third task {\bf(Work Package 2c)} is error estimation.
 Regardless of the method used, numerical errors seem inevitable in continuous-time models, where only a finite number of optimisation steps are feasible, whereas in theory, an optimisation would actually be needed in each intermediate time point. 
 This gives rise to numerical errors, which are in every step transferred to the next steps as perturbations. 
-Existing error estimates work well for short time intervals, but tend to significantly overestimate the errors for larger time intervals, as has been observed experimentally in simple problems.
+Existing error estimates work well for short time intervals, but tend to significantly overestimate the errors for larger time intervals, as has been observed experimentally in simple problems~\cite{erreygers2017:ictmcs,skulj2015}.
 \item An important part of the error estimation will be a perturbation analysis, which is also of independent interest and will therefore be explored as a separate research task {\bf(Work Package 2d)}.
 We will analyse how perturbations of its parameters affect the distance between an imprecise continuous-time Markov chain and its perturbed version.
 Such a perturbation analysis has been successfully applied to imprecise discrete-time Markov chains; we expect it to be equally successful in continuous time.
@@ -1061,27 +1063,27 @@ As discussed, this computation-oriented research will benefit from the theoretic
 \emph{Limit behaviour and stationary distributions} {\bf (Research Line 3)}.\\[3pt]
 Limit behaviour is a crucial topic in Markov chain theory, and if a unique stationary distribution exists, it is often a central object of interest. 
 In the precise case, linear algebra provides powerful tools for the analysis of limit behaviour, but no such methods are available for imprecise Markov chains. 
-For imprecise discrete-time Markov chains, alternative methods have been developed~\cite{cooman2008}, but in continuous time, little is known. 
-Therefore, our third main goal is to study and characterise the limit behaviour of imprecise continuous-time Markov chains. 
-This line of research can be divided into three work packages:
+For imprecise discrete-time Markov chains, alternative methods have been developed~\cite{cooman2008,hermans2012,skulj:13b,skulj2013}, but in continuous time, little is known so far~\cite{DeBock:2016:iCTMClimit,erreygers2017:ictmcs}. 
+Therefore, our third main goal is to study the limit behaviour of imprecise continuous-time Markov chains more closely. 
+We foresee three work packages:
 % \vspace{6pt}
 \begin{enumerate}[label=\tiny$\blacksquare$,leftmargin=*,noitemsep]
-\item The first task will be to find out under which conditions an imprecise continuous-time Markov chain converges to a limit distribution {\bf (Work Package 3a)}. 
-When such a limit distribution exists, we will also characterise the conditions under which it depends on the initial state of the chain and the conditions under which it is stationary. 
-In discrete time, such a study has already been conducted successfully~\cite{hermans2012,cooman2008}. 
-In continuous time however, we are only aware of some partial answers \cite{DeBock:2016:iCTMClimit}.
-\item Once we have established the existence of a limit distribution, the next task will be to develop methods that allow us to compute it~{\bf (Work Package 3b)}. 
+\item The first task will be to characterise the conditions under which the limit distribution of an imprecise continous-time Markov chain is stationary, in the sense that it does not depend on the initial state of the chain {\bf (Work Package 3a)}. 
+In discrete time, such a study has already been conducted successfully~\cite{hermans2012,cooman2008,skulj2013}. 
+In continuous time however, all that is known is a qualititive condition in terms of accessibility relations \cite{DeBock:2016:iCTMClimit}. Our goal is to develop quantitative characterisations that take into account the speed of convergence, using the coefficients of ergodicity of Work Package 2a.
+\item Once we have established the existence of a stationary distribution, the next task will be to develop methods that allow us to compute it~{\bf (Work Package 3b)}. 
 In the precise case, this is relatively easy, as it requires solving a linear system of equations. 
 In the imprecise case, this system becomes non-linear, and solving it is far more difficult. 
 We envision two approaches. 
 The first option is to try and solve this system directly. 
 We expect this to be feasible only in special cases. 
-Whenever it is not, we will resort to the second option, which is to compute the limit distribution more naively: to actually approach the limit up to some desired accuracy. 
+Whenever it is not, we will resort to the second option, which is to actually approach the limit up to some desired accuracy. 
 Since this second option will clearly benefit from the results in Work Packages 2b and 2c, we intend for the respective researchers to collaborate on these topics.
 \item A third task will be to analyse the structure of limit distributions: the types of classes the states belong to {\bf (Work Package 3c)}.
 We expect this to be challenging because, due to their generality, imprecise continuous-time Markov chains will allow for a far richer range of classes of states and transitions between them than in the precise case. 
 Our aim is to investigate the induced accessibility relations and their influence on convergence, especially when it is not unique, and to characterise and classify the invariant distributions. 
-As a first step, we will extend the methodology in~\cite{skulj:13b}---a partial classification of invariant sets for discrete-time imprecise Markov chains---to continuous time. 
+As a first step, we will extend the methodology in~\cite{skulj:13b} to continuous time. 
+%---a partial classification of invariant sets for discrete-time imprecise Markov chains---
 \end{enumerate}
 
 \emph{Contingency plans} {\bf (Work Packages 4 \& 5)}.\\[3pt]
@@ -1099,73 +1101,7 @@ Since real applications are an ideal testing ground for new theory, it would be 
 A second extra research topic is time reversibility.
 This concept is very important for (precise) stochastic processes, but it has not yet been systematically studied in the framework of imprecision; to the best of our knowledge, the preliminary results in Reference~\cite{skulj2016} are the only exception.
 Therefore, a systematic analysis of imprecise continuous-time reversible Markov chains {\bf (Work Package 5)} would definitely be an interesting research topic to pursue.
-%The first task is a formal approach to time reversal for processed based on imprecise probabilities
-% This is a theoretically challenging task, since the concept applies techniques, such as conditioning and Bayes rule, whose applications to imprecise probability models substantially differ from their use in the classical models. We will examine the possibilities to model time reversal in terms of the models of imprecise probabilities and establish the relation between continuous random walks on weighted graphs, extending the methodology used in  \cite{skulj:16} for the discrete time case. A special emphasis will be on the computational issues. 
 
-
-%The work will be divided into the following ??? work packages.
-%
-%\vspace{6pt}
-%\begin{itemise}
-%	\item[\tiny$\blacksquare$] 
-%	Within  {\bf(Work Package 4a)} conceptual properties of time reversal will be investigated. We will answer the following questions. Is a time reversed imprecise Markov chain still Markovian if it is imprecise. Can a time reversed imprecise Markov chain be analysed in terms of convex sets of probabilities. These questions will be addressed using the theory developed within the first line of research. 
-%	
-%	\item[\tiny$\blacksquare$]
-%	Partially independently from time reversal for general imprecise Markov chains we will study reversible Markov chains, which are those, whose stationary joint probability distributions do not change if the time is reversed within {\bf(Work Package 4b)}. We expect that families of reversible imprecise Markov chains can be constructed without necessarily having all answers regarding time reversal solved. As a starting point we will generalise the model of random walks on weighted graphs  proposed in \cite{skulj:16} to the continuous time framework.
-%\end{itemise}
-%We must first answer the question whether a time reversed imprecise Markov chain is still Markovian if it is imprecise, and what properties does it have. The next task is to identify reversible imprecise Markov chains, which are those, whose properties do not change if they are reversed. Along with the theoretical questions we will explore practical/computational aspects of the model proposed in \cite{skulj:16} extended to the continuous time framework. 
-%
-%Time reversal for imprecise Markov chains will be examined. 
-%In particular, we will find out under what conditions is a reverse process Markov, and specifically, whether it fits into the framework of imprecise Markov chains examined. 
-%In particular, we will examine the continuous time version of the model of random walks on graphs.  
-%(tentative title, feel free to change)
-
-
-
-
-
-% ## Addedd by Damjan
-
-%The first step in this project will be to \emph{develop robust versions of the basic building blocks of queueing models, that is, imprecise arrival and service-time processes} {\bf(Work Package 1)}.
-%Initially, given their popularity and importance, we will focus on developing imprecise versions of Poisson processes and exponential distributions, with increasing degrees of robustness.
-%A first level of robustness will be added by allowing the parameter of Poisson processes and exponential distributions to vary within intervals.
-%Next, additional layers of robustness will be added by allowing this parameter to be time-dependent and eventually even history-dependent.
-%We intend to achieve this in a very rigorous way, by dropping the independence axioms that are traditionally used to define Poisson processes and exponential distributions, and replacing them with increasingly weaker axioms.
-%Each additional layer of robustness will result in a more flexible and realistic uncertainty model, at the cost of increased theoretical and computational complexity.
-%However, given that the Data Science Lab has already successfully tackled this kind of issues for discrete-time robust stochastic processes~\cite{hermansITIP}, we expect to be able to obtain similar successes in this continuous-time case. In a later stage, we will try to robustify other continuous-time distributions and arrival processes, such as Erlang distributions and Markovian arrival processes.
-
-% % Damjan 
-
-
-
-% # Damjan
-
-%The second step in this project consists in using the imprecise arrival and service-time processes of the first step to \emph{develop robust queueing models} {\bf(Work Package 2)}.
-%Basically, the idea is to consider existing queueing models, and to replace their arrival and service-time processes by our imprecise versions.
-%We intend to start by developing a robust version of the $M/M/1$ queue, where customers arrive according to an imprecise Poisson process, one server serves the waiting customers in an FCFS order, and service times have an imprecise exponential distribution.
-%In the precise case, the number of customers in the queue can then be described by a continuous-time birth-death chain.
-%Similarly, we would like to show that in the imprecise case, the number of customers can be described by a continuous-time imprecise birth-death chain, which is a simple type of continuous-time imprecise Markov chain~\cite{Skulj2015}.
-%Similarly, for more complex queueing models, we intend to show that the number of customers can be described by more complex imprecise Markov chains.
-%
-%Clearly, step two will require us to \emph{establish a rigorous theoretical basis for continuous-time imprecise Markov chains}, and we regard this as a third part of this research {\bf(Work Package 3)}, which we intend to initiate before---and then continue in parallel with---the second step. Some preliminary research has already been conducted on this topic~\cite{Skulj2015}, including some recent unpublished work by the imprecise probability subunit of the Data Science Lab, but it is fair to say that there are still many unsolved basic theoretical and computational problems left. For example, past research on imprecise continous-time Markov chains only considered finite state spaces, whereas basic queueing theory often considers countably many states. %\todo{*** what do you mean by that? ***} *** references ***
-%
-%The three steps that were discussed above are purely theoretical, and consist of developing a formal framework in which to study imprecise arrival and service-time processes, imprecise Markov chains, and ways of combining these to construct robust queueing models.
-%In order to be able to use these models in practice, this formal framework will need to be complemented with efficient computational methods.
-%In particular, it will be necessary to develop methods that are able to provide us with exact bounds on performance measures---such as the average occupancy or delay---that reflect the extent to which the imprecision in the input affects the output.
-%Indeed, once we have these bounds, they can then be used to make robust a priori design choices while dimensioning a queueing system, such as determining the needed buffer space or the desired number of servers, in order to achieve the desired performance.
-%Similarly, for systems whose number of servers can vary over time, these bounds can be used to design robust dynamic server policies.
-%Given the importance of these bounds, a fourth step in this project will be to \emph{extend the existing computational methods for continuous-time imprecise Markov chains}~\cite{Skulj2015,Troffaes+GSB-ISIPTA15p}, and to \emph{use these methods to efficiently compute exact bounds on performance measures} {\bf(Work Package 4)}.
-%
-%Although we expect to reach the majority of the above goals, it might of course happen that we do not. For example, some types of performance measures might turn out to be inherently intractable to compute with, or we might come across stochastic processes for which adding three layers of robustness (allowing their parameters to be interval-valued, time- and history dependent) results in a model that is simply too complex to work with. However, even if we were to come across such problems, this will not endanger the global aim of the first part of this project, which is to develop robust continuous-time queueing models. Indeed, there are various types of stochastic processes, increasingly complex ways of adding robustness, and many performance measures of interest. Adding a modest amount of robustness to simple queueing models will definitely be possible, and this alone suffices to continue with the rest of this project. However, of course, our intention is to go much further: ideally, we would like to develop a general framework for working with robust continuous-time queueing models.
-%%In any case, regardless on how general our study ends up being, we definitely expect to be able to develop robust continuous-time queueing models, and this will allow us to move to a next step.
-%
-%As should have become clear from the explanation above, our proposed research does not work towards a specific application, neither does it try to build an ad hoc model for some specific problem.
-%Instead, our aim is to build a general framework for robust continuous-time queueing theory.
-%Nevertheless, if we succeed in developing such a general framework, then of course, it can be used to study and solve a variety of problems, in different types of queueing applications. In order to demonstrate this, we intend to \emph{use our framework to analyse one or two specific queueing applications} {\bf(Work Package 5)}.
-%Our choice of applications will depend on the level of complexity that our framework is able to deal with, but since robustness is an essential feature of our approach, we intend to focus on problems where this feature is important, that is, applications where the exact values of the parameters of the model are uncertain (e.g. telecommunication) and/or non-stationary (e.g. call centres \cite{Defraeye20164}).
-%
-%The purpose of this applied side of the project is only to test and validate the usefulness of our theory. Therefore, tackling this applied part will not require us to learn imprecise stochastic processes from data (e.g.\ Internet traces). For the purposes of this project, we can simply start from precise stochastic processes---learnt by means of existing methods, that is, by proposing a model that is deemed adequate and then applying estimation theory (see e.g.\ \cite{Breuer2002}) to estimate its parameters---and can then add increasing amounts of imprecision to these precise stochastic processes in order to study the robustness of the resulting outputs. %The initial precise model can then be learnt by means of existing methods, that is, by proposing a model that is deemed adequate and then applying estimation theory (see e.g.\ \cite{Breuer2002}) to estimate its parameters.
-%However, in a later phase, it would of course be better to \emph{develop methods for learning imprecise continuous-time stochastic processes directly from data} {\bf(Work Package 6)}. At this point, we envision that this last topic will only be marginally treated in the project. However, if necessary, it does provide us with a contingency plan that is of independent interest.
 
 \vspace{7pt}
 
@@ -1174,16 +1110,14 @@ Therefore, a systematic analysis of imprecise continuous-time reversible Markov 
 Indicate for each WP the time that it is expected to take.
 You might use a table or another type of scheme to clarify the work plan. Clearly indicate the contribution of each project partner, taking into account the complementary expertise of the project partners.}
 
-% {\bf\color{blue} (WE WAIT WITH THIS PART FOR NOW...)}
 
-\vspace{11pt}
+%\vspace{6pt}
 \begin{center}
 \resizebox{1\textwidth}{!}{%
 \begin{tabular}{r|l|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c}
 & \emph{Short description} & \multicolumn{4}{c|}{\textbf{\nth{1} year}}   & \multicolumn{4}{c|}{\textbf{\nth{2} year}} & \multicolumn{4}{c|}{\textbf{\nth{3} year}} & \multicolumn{4}{c}{\textbf{\nth{4} year}} 
 \\ 
 \hline
-%\textbf{RL1} 
 & \textbf{Joint models and properties}
 &   \multicolumn{16}{c}{}     
 \\ \hline
@@ -1195,15 +1129,14 @@ You might use a table or another type of scheme to clarify the work plan. Clearl
 \\ \hline
 \textbf{WP1c} & Mathematical properties         
 &  &  &  &  &  & G & G & G & B & B & B & B & B & B &  &    
-\\ \hline
-%\textbf{RL2} 
+\\ \hline 
 & \textbf{Computational methods}
 &   \multicolumn{16}{c}{}     
 \\ \hline
 \textbf{WP2a} & Coefficients of ergodicity 
 & L & L & L & L & B & B & B & B &  &  &  &  &  &  &   &    
 \\ \hline
-\textbf{WP2b} & Compute thight bounds             
+\textbf{WP2b} & Compute tight bounds             
 &  &  &  &  &  &  & L & L & B & B & B & B & B & B &  &  
 \\ \hline
 \textbf{WP2c} & Error estimation    
@@ -1214,17 +1147,16 @@ L & L & B & B & B & B &  &
 &   &   &   & L & L & L & L & L & L  &  &  &  &  &  &  & 
 \\ 
 \hline
-%\textbf{RL3} 
 & \textbf{Limit behaviour}
 &   \multicolumn{16}{c}{}     
 \\ \hline
-\textbf{WP3a} & Existence of limit distributions
+\textbf{WP3a} & Characterise stationary distributions
 & G & G & G & G & B & B & B  & B &  &   &   &   &   &   &   &    
 \\ \hline
-\textbf{WP3b} & Compute limit distributions      
+\textbf{WP3b} & Compute stationary distributions      
 &   &  &  &  &  &  &  &  & G & G & B & B & B & B &  &    
 \\ \hline
-\textbf{WP3c} & Characterise limit distributions   
+\textbf{WP3c} & Characterise limit states   
 &   &   &   &  & G & G & G & G & B & B &  B & B &  &  &   &  
 \\ \hline 
 & \textbf{Contingency plans}
@@ -1242,216 +1174,204 @@ L & L & B & B & B & B &  &
 At the universities of Ghent and Ljubljana, a PhD fellowship, and therefore also the work on the proposed research, is usually spread over a period of four years.
 We have indicated these four years in the table above, and have divided every year into four periods of three months (i.e.~quarters).
 The work on the research has already been divided in work packages in the previous section.
-For each work package, the table provides a short description and indicates the quarters during which we expect the researchers to be working on it.
+For each work package, the table indicates the quarters during which we expect the researchers to be working on it.
 
-We mark a box with a G to indicate that the research on that topic, in that specific quarter, will be led by the Ghent group; an L indicates that the research will be led by the Ljubljana group. 
-For some of the work packages, after the initial research on that topic has been carried out, we plan to visit each other to discuss the results, followed by joint work to finalise that part of the research; we indicate this in the table by marking the corresponding box with a B (which stands for `both'). As explained in the methodology section, this collaboration is essential for work packages WP1c, WP2b, WP2c and WP3b, because we expect the results that are obtained in these work packages to benefit from each other. For work packages WP2a, WP3a, WP3c, WP4 and WP5, the planned collaboration is not essential, but nevertheless recommended because both partners have a mutual interest and expertise in these topics.
+We mark a box with a G to indicate that the research on that topic, in that specific quarter, will be led by the Ghent group (Gert de Cooman will lead WP1a-c, whereas Jasper de bock will lead WP3a-c); an L indicates that the research will be led by the Ljubljana group (Damjan \v{S}kulj). For some of the work packages, after the initial research on that topic has been carried out, we plan to visit each other to discuss the results, followed by joint work to finalise that part of the research; we indicate this in the table by marking the corresponding box with a B (which stands for `both'). These visits are expected to take place at the beginning of the second and third year of the project and will be attended by all project members. Depending on the outcome, these short visits can then be followed by a prolongued stay of the PhD students that are involved in a specific topic. As explained in the methodology section, this type of collaboration is essential for work packages WP1c, WP2b, WP2c and WP3b, because we expect the results that are obtained in these work packages to benefit from each other. For work packages WP2a, WP3a, WP3c, WP4 and WP5, the planned collaboration is not essential, but nevertheless recommended because both partners have a mutual interest and expertise in these topics.
+
+
+
 After the work on a specific work package is finished, the results will be disseminated at research conferences and published in scientific journals. 
 The last two quarters of the fourth year are intentionally left blank, because these will be reserved for writing the PhD theses. 
-
-%We tick the box of a quarter with an x to indicate almost certainties; these are the quarters during which we expect her to definitely spend time on the indicated work package.
-%We use o's to tick boxes for which we are not yet certain that she will need and/or use them.
-%These o-quarters are used to absorb setbacks or to allow for some flexibility, and indicate the maximum amount of time that we intend the student to spend on a given work package.
-%Of course, a good deal of the time in the last two quarters of year four will also be spent writing the PhD thesis, but we have not marked this in the table.
-
-
-% As explained in our methodology, the work on (WP2) is initiated after the work on (WP3) because it relies on some of its results. Furthermore, as also explained before, (WP6) is currently not at the core of the proposed research, but can serve as a contingency plan if necessary.
-
-
-%As explained in our methodology, the work on (WP2) is initiated after the work on (WP3) because it relies on some of its results. Furthermore, as also explained before, (WP6) is currently not at the core of the proposed research, but can serve as a contingency plan if necessary.
-
-% Alternative:
-% \begin{table}[H]
-%     \caption{Summary of work packages}
-%     \centering
-%     \begin{tabular}{c l}
-%         \toprule
-%                      Work package & Very short description \\
-%         \midrule
-%        (WP1)    & Imprecise arrival and service-time processes \\
-%        (WP2)    & Development of robust queueing models \\
-%        (WP3)    & Continuous-time imprecise Markov chains \\
-%        (WP4)    & Computing bounds on performance measures \\
-%        (WP5)    & Learning robust queueing models from data \\
-%        (WP6)    & Applications of robust queueing models \\
-%        \bottomrule
-%     \end{tabular}
-%     \begin{tabular}{l c cccc c cccc c cccc c cccc}
-%         \toprule
-%         & \hspace{.1em} & \multicolumn{4}{c}{\nth{1} year}   & \hspace{.5em}    & \multicolumn{4}{c}{\nth{2} year}      & \hspace{.5em} & \multicolumn{4}{c}{\nth{3} year} & \hspace{.5em} & \multicolumn{4}{c}{\nth{4} year} \\
-%         \midrule
-%         WP1    & & x & x & x & x &   & x & x &   &   &   &   &   &   &   &   &   &   &   &    \\
-%         WP2    & &   &   &   &   &   & x & x & x & x &   & x & x & x &   &   &   &   &   &    \\
-%         WP3    & &   &   &   &   &   &   &   &   &   &   &   &   & x & x &   & x & x & x & x   \\
-%         WP4    & &   &   &   &   &   &   &   &   &   &   &   &   & x & x &   & x & x & x & x   \\
-%         WP5    & &   &   &   &   &   &   &   &   &   &   &   &   & x & x &   & x & x & x & x   \\
-%         WP6    & &   &   &   &   &   &   &   &   &   &   &   &   & x & x &   & x & x & x & x   \\
-%         \bottomrule
-%     \end{tabular}
-% \end{table}
 
 \vspace{-10pt}
 
 \bibliographystyle{plain}
 \renewcommand\refname{\normalsize Enumerate the bibliographical references that are relevant for your research proposal.}
-\bibliography{bibliography,general}
-%\begin{thebibliography}{10}
+%\bibliography{bibliography,general}
+\begin{thebibliography}{10}
 
-% \bibitem{augustin2013:itip}
-% T. Augustin, F.~P.~A. Coolen, G. De Cooman and M.~C.~M.
-%   Troffaes, editors.
-% \newblock {\em Introduction to Imprecise Probabilities}.
-% \newblock John Wiley \& Sons, 2014.
+\bibitem{augustin2013:itip}
+T. Augustin, F.~P.~A. Coolen, G. {d}e Cooman \& M. C.~M. Troffaes, editors.
+\newblock {\em Introduction to Imprecise Probabilities}.
+\newblock John Wiley \& Sons, 2014.
 
-% \bibitem{Crossman:2010}
-% R.~J. Crossman and D.~\v{S}kulj.
-% \newblock Imprecise {M}arkov chains with absorption.
-% \newblock {\em International Journal of Approximate Reasoning}, 51:1085--1099,
-%   2010.
+\bibitem{Crossman:2010}
+R.~J. Crossman and D.~\v{S}kulj.
+\newblock Imprecise {M}arkov chains with absorption.
+\newblock {\em International Journal of Approximate Reasoning}, 51:1085--1099,
+  2010.
 
-% \bibitem{debock2015:thesis}
-% J. De~Bock.
-% \newblock {\em Credal Networks under Epistemic Irrelevance: Theory and
-%   Algorithms}.
-% \newblock PhD thesis, Ghent University, Faculty of Engineering and
-%   Architecture, 2015.
+\bibitem{debock2015:thesis}
+J. De~Bock.
+\newblock {\em Credal Networks under Epistemic Irrelevance: Theory and
+  Algorithms}.
+\newblock PhD, Ghent University, 2015.
 
-% \bibitem{DeBock:2016:iCTMClimit}
-% J. De~Bock.
-% \newblock {Convergence of Continuous-Time Imprecise Markov Chains}.
-% \newblock 2016.
-% \newblock ArXiv:1602.05478.
+\bibitem{DeBock:2016:iCTMClimit}
+J. De~Bock.
+\newblock {Convergence of Continuous-Time Imprecise {M}arkov Chains}.
+\newblock 2016.
+\newblock ArXiv:1602.05478.
 
-% \bibitem{debock2014:estihmm}
-% J. De~Bock and G. De~Cooman.
-% \newblock An efficient algorithm for estimating state sequences in imprecise
-%   hidden {M}arkov models.
-% \newblock {\em Journal of Artificial Intelligence Research}, 50:189--233, 2014.
+\bibitem{debock2014:estihmm}
+J. De~Bock \& G. de~Cooman.
+\newblock An efficient algorithm for estimating state sequences in imprecise
+  hidden {M}arkov models.
+\newblock {\em Journal of Artificial Intelligence Research}, 50:189--233, 2014.
 
-% \bibitem{cooman2015:markovergodic}
-% G. De Cooman, J. De~Bock and S. Lopatatzidis.
-% \newblock A study of imprecise {M}arkov chains: joint lower expectations and
-%   point-wise ergodic theorems.
-% \newblock {\em International Journal of Approximate Reasoning}, 2015.
-% \newblock Accepted for publication.
+\bibitem{cooman2015:markovergodic}
+G. {d}e Cooman, J. De~Bock \& S. Lopatatzidis.
+\newblock A study of imprecise {M}arkov chains: joint lower expectations and
+  point-wise ergodic theorems.
+\newblock {\em International Journal of Approximate Reasoning}, 2015.
+\newblock Accepted for publication.
 
-% \bibitem{cooman2007d}
-% G. De Cooman and F. Hermans.
-% \newblock Imprecise probability trees: Bridging two theories of imprecise
-%   probability.
-% \newblock {\em Artificial Intelligence}, 172(11):1400--1427, 2008.
+\bibitem{cooman2007d}
+G. {d}e Cooman \& F. Hermans.
+\newblock Imprecise probability trees: Bridging two theories of imprecise
+  probability.
+\newblock {\em Artificial Intelligence}, 172(11):1400--1427, 2008.
 
-% \bibitem{cooman2009}
-% G. De Cooman, F. Hermans, A. Antonucci, and M. Zaffalon.
-% \newblock Epistemic irrelevance in credal nets: the case of imprecise {M}arkov
-%   trees.
-% \newblock {\em International Journal of Approximate Reasoning}, 51:1029--1052,
-%   2010.
+\bibitem{cooman2009}
+G. {d}e Cooman, F. Hermans, A. Antonucci \& M. Zaffalon.
+\newblock Epistemic irrelevance in credal nets: the case of imprecise {M}arkov
+  trees.
+\newblock {\em International Journal of Approximate Reasoning}, 51:1029--1052,
+  2010.
 
-% \bibitem{cooman2008}
-% G. De Cooman, F. Hermans and E. Quaeghebeur.
-% \newblock Imprecise {M}arkov chains and their limit behaviour.
-% \newblock {\em Probability in the Engineering and Informational Sciences},
-%   23(4):597--635, 2009.
+\bibitem{cooman2008}
+G. {d}e Cooman, F. Hermans \& E. Quaeghebeur.
+\newblock Imprecise {M}arkov chains and their limit behaviour.
+\newblock {\em Probability in the Engineering and Informational Sciences},
+  23(4):597--635, 2009.
 
-% \bibitem{hartfiel1998}
-% D.~J. Hartfiel.
-% \newblock {\em {Markov} Set-Chains}. Springer, Berlin, 1998.
+\bibitem{erreygers2017:ictmcs}
+A.~Erreygers \& J.~De~Bock.
+\newblock Imprecise continuous-time {M}arkov chains: efficient computational
+  methods with guaranteed error bounds.
+\newblock 2017.
+\newblock ArXiv:1702.07150.
 
-% \bibitem{hermans2012}
-% F. Hermans and G. De Cooman.
-% \newblock Characterisation of ergodic upper transition operators.
-% \newblock {\em International Journal of Approximate Reasoning}, 53(4):573--583,
-%   2012.
+\bibitem{hartfiel1998}
+D.~J. Hartfiel.
+\newblock {\em {{M}arkov} Set-Chains}.
+\newblock Number 1695 in Lecture Notes in Mathematics. Springer, 1998.
 
-% \bibitem{utkin:02}
-% I.~Kozine and L.~V. Utkin.
-% \newblock Interval-valued finite {M}arkov chains.
-% \newblock {\em Reliable Computing}, 8(2):97--113, 2002.
+\bibitem{hermans2012}
+F. Hermans \& G. {d}e Cooman.
+\newblock Characterisation of ergodic upper transition operators.
+\newblock {\em International Journal of Approximate Reasoning}, 53(4):573--583,
+  2012.
 
-% \bibitem{shafer2001}
-% G. Shafer and V. Vovk.
-% \newblock {\em Probability and Finance: It's Only a Game!}
-% \newblock Wiley, New York, 2001.
+\bibitem{niemiec2007:bonusmalus}
+M.~Niemiec.
+\newblock Bonus-malus systems as {M}arkov set-chains.
+\newblock {\em ASTIN Bulletin}, 37:53--66, 2007.
 
-% \bibitem{troffaes:2013}
-% D. \v{S}kulj and M. C. M. Troffaes.
-% \newblock Model checking for imprecise markov chains. 
-% \newblock In {\em Proceedings of the 8th International Symposium on Imprecise
-%   Probability: Theories and Applications}, pages 337--344, 2013.
+\bibitem{rottondi2017:flexigrid}
+C.~Rottondi, A.~Erreygers, G.~Verticale, \& J.~De~Bock.
+\newblock Modelling spectrum assignment in a two-service flexi-grid optical
+  link with imprecise continuous-time markov chains.
+\newblock In {\em Proceedings of DRCN 2017}, 2017.
+\newblock Accepted for publication.
 
-% \bibitem{troffaes2013:lp}
-% Matthias C.~M. Troffaes and Gert {d}e Cooman.
-% \newblock {\em Lower Previsions}.
-% \newblock Wiley, 2014.
+\bibitem{samuels2009phd}
+C.~L. Samuels.
+\newblock {\em {M}arkov set-chains as models of plant succession}.
+\newblock PhD, Tennessee University, 2001.
 
-% \bibitem{Troffaes+GSB-ISIPTA15p}
-% M.~C.~M. Troffaes, J. Gledhill, D. \v{S}kulj and S. Blake.
-% \newblock Using imprecise continuous time markov chains for assessing the
-%   reliability of power networks with common cause failure and non-immediate
-%   repair.
-% \newblock In {\em Proceedings of the 9th International Symposium on Imprecise
-%   Probability: Theories and Applications}, pages 287--294, 2015.
+\bibitem{shafer2001}
+G. Shafer \& V. Vovk.
+\newblock {\em Probability and Finance: It's Only a Game!}
+\newblock Wiley, New York, 2001.
 
-% \bibitem{ville1939}
-% J. Ville.
-% \newblock {\em \'Etude critique de la notion de collectif}.
-% \newblock Gauthier-Villars, Paris, 1939.
+\bibitem{soullard2017:gesturerecognition}
+Y.~Soullard, A.~Antonucci \& S.~Destercke.
+\newblock Technical gestures recognition by set-valued hidden {M}arkov models
+  with prior knowledge.
+\newblock In {\em Soft Methods for Data Science, Advances in Intelligent
+  Systems and Soft Computing}, volume 456, pages 455--462, 2017.
 
-% \bibitem{vovk2008:brownian}
-% V.~G. Vovk.
-% \newblock Game-theoretic {B}rownian motion.
-% \newblock 2016.
-% \newblock ArXiv:0801.1309.
+\bibitem{troffaes2013:lp}
+M. C.~M. Troffaes \& G. {d}e Cooman.
+\newblock {\em Lower Previsions}.
+\newblock Wiley, 2014.
 
-% \bibitem{vovk2012:emergence:of:probability}
-% V.~G. Vovk.
-% \newblock Continuous-time trading and the emergence of probability.
-% \newblock {\em Finance and Stochastics}, 16(4):561--609, 2012.
+\bibitem{Troffaes+GSB-ISIPTA15p}
+M. C.~M. Troffaes, J. Gledhill, D. \v{S}kulj \& S. Blake.
+\newblock Using imprecise continuous time {M}arkov chains for assessing the
+  reliability of power networks with common cause failure and non-immediate
+  repair.
+\newblock In {\em Proceedings of ISIPTA'15}, pages 287--294, 2015.
 
-% \bibitem{skulj:09}
-% D. \v{S}kulj.
-% \newblock Discrete time {M}arkov chains with interval probabilities.
-% \newblock {\em International Journal of Approximate Reasoning},
-%   50(8):1314--1329, 2009.
+\bibitem{troffaes:2013}
+M. C.~M. Troffaes \& D. Skulj.
+\newblock Model checking for imprecise {M}arkov chains.
+\newblock In {\em Proceedings of ISIPTA'13},
+  pages 337--344, 2013.
 
-% \bibitem{skulj:13b}
-% D. \v{S}kulj.
-% \newblock A classification of invariant distributions and convergence of
-%   imprecise {M}arkov chains.
-% \newblock {\em Linear Algebra and its Applications}, 439(9):2542--2561, 2013.
+\bibitem{utkin:02}
+I.~Kozine \&~L.V. Utkin.
+\newblock Interval-valued finite {M}arkov chains.
+\newblock {\em Reliable Computing}, 8(2):97--113, 2002.
 
-% \bibitem{skulj2015:continuous:bounds}
-% D. \v{S}kulj.
-% \newblock Efficient computation of the bounds of continuous time imprecise
-%   {M}arkov chains.
-% \newblock {\em Applied Mathematics and Computation}, 250:165--180, 2015.
+\bibitem{ville1939}
+J. Ville.
+\newblock {\em \'Etude critique de la notion de collectif}.
+\newblock Gauthier-Villars, Paris, 1939.
 
-% \bibitem{skulj:2016b}
-% D. \v{S}kulj.
-% \newblock Perturbation bounds and degree of imprecision for uniquely convergent
-%   imprecise markov chains.
-%   \newblock 2016.
-% \newblock ArXiv:1602.08901.
+\bibitem{vovk1993:forecasting}
+V.~Vovk.
+\newblock Forecasting point and continuous processes: Prequential analysis.
+\newblock {\em Test}, 2:189--217, 1993.
 
-% \bibitem{skulj:16}
-% D. \v{S}kulj.
-% \newblock Random walks on graphs with interval weights and precise marginals.
-% \newblock {\em International Journal of Approximate Reasoning},
-%   73:76--86, 2016.
+\bibitem{vovk2016:richquick}
+V.~Vovk.
+\newblock Getting rich quick with the axiom of choice.
+\newblock 2016.
+\newblock ArXiv:1604.00596.
 
-% \bibitem{skulj2013}
-% D. \v{S}kulj and R. Hable.
-% \newblock Coefficients of ergodicity for {M}arkov chains with uncertain
-%   parameters.
-% \newblock {\em Metrika}, 76(1):107--133, 2013.
+\bibitem{skulj:09}
+D. \v{S}kulj.
+\newblock Discrete time {M}arkov chains with interval probabilities.
+\newblock {\em International Journal of Approximate Reasoning},
+  50(8):1314--1329, 2009.
 
-% \bibitem{walley1991}
-% P. Walley.
-% \newblock {\em Statistical Reasoning with Imprecise Probabilities}.
-% \newblock Chapman and Hall, London, 1991.
+\bibitem{skulj:13b}
+D. \v{S}kulj.
+\newblock A classification of invariant distributions and convergence of
+  imprecise {M}arkov chains.
+\newblock {\em Linear Algebra and its Applications}, 439(9):2542 -- 2561, 2013.
 
-%\end{thebibliography}
+\bibitem{skulj2015}
+D. \v{S}kulj.
+\newblock Efficient computation of the bounds of continuous time imprecise
+  {M}arkov chains.
+\newblock {\em Applied Mathematics and Computation}, 250(0):165 -- 180, 2015.
+
+\bibitem{skulj:2016b}
+D. \v{S}kulj.
+\newblock Perturbation bounds and degree of imprecision for uniquely convergent
+  imprecise {M}arkov chains, 2016.
+
+\bibitem{skulj2013}
+D. \v{S}kulj \& R. Hable.
+\newblock Coefficients of ergodicity for {M}arkov chains with uncertain
+  parameters.
+\newblock {\em Metrika}, 76(1):107--133, 2013.
+
+\bibitem{walley1991}
+P. Walley.
+\newblock {\em Statistical Reasoning with Imprecise Probabilities}.
+\newblock Chapman and Hall, London, 1991.
+
+\bibitem{skulj2016}
+D. Škulj.
+\newblock Random walks on graphs with interval weights and precise marginals.
+\newblock {\em International Journal of Approximate Reasoning}, 73:76 -- 86,
+  2016.
+
+\end{thebibliography}
 
 \vspace{5mm}
 
@@ -1468,18 +1388,4 @@ In addition to purely educative or demonstrative purposes, Markov chains can als
 The Slovenian group has been involved in the successful development of such a web-based platform for prediction and strategy testing for the structure of Slovenian armed forces. 
 Such platforms would definitely benefit from models that allow for imprecision as well.
 
-
-{\color{red}
-\begin{itemize}
-\item
-We should acknowledge and our incorporate our most recent work on imprecise continuous-time Markov chains \cite{rottondi2017:flexigrid,erreygers2017:ictmcs}
-\item
-A reviewer said that the speed of convergence should be explicitly mentioned in research line 3 (because it is relevant to Work Package 3b)
-\item
-We should argue for its practical relevance (for example, for which type of applications would the things we want to try and compute be relevant).
-\item
-The intended exchanges of researchers should be mentioned more explicitly
-\item
-One of the reviewers asked for some more concrete info on how we intend to coordinate this project (beyond just indicating which topics we will collaborate on)
-\end{itemize}}
 \end{document}
